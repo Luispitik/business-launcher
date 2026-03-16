@@ -109,11 +109,11 @@ Para máximo rendimiento, Business Launcher funciona con estas skills:
 
 ## Licencia
 
-**CC BY-SA 4.0** — Puedes usar, modificar y redistribuir esta skill libremente, incluso con fines comerciales, siempre que:
+**CC BY-NC 4.0** — Puedes usar, modificar y redistribuir esta skill libremente para uso no comercial, siempre que:
 
 1. **Cites al autor original**: NorteIA / SalgadoIA — Luis Salgado
 2. **Incluyas un enlace** a este repositorio
-3. **Distribuyas modificaciones** bajo la misma licencia
+3. **No lo uses con fines comerciales** — solo el autor original (NorteIA / SalgadoIA) puede usarlo comercialmente
 
 Ver [LICENSE](./LICENSE) para el texto completo.
 
