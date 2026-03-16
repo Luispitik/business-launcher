@@ -3,7 +3,7 @@ name: business-launcher
 version: 3.0.0
 author: NorteIA / SalgadoIA — Luis Salgado (https://norteia.es | https://salgadoia.com)
 license: CC BY-SA 4.0
-repository: https://github.com/lusalgado/business-launcher
+repository: https://github.com/Luispitik/business-launcher
 description: >
   Skill orquestadora que guía a un profesional desde una idea de negocio
   hasta una empresa operativa. Arquitectura modular con 5 rutas adaptativas

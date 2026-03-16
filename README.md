@@ -62,7 +62,7 @@ SKILL.md                        → Orquestador principal
 
 ```bash
 # Clona el repositorio en tu directorio de skills
-git clone https://github.com/lusalgado/business-launcher.git ~/.claude/skills/business-launcher
+git clone https://github.com/Luispitik/business-launcher.git ~/.claude/skills/business-launcher
 ```
 
 ## Uso
