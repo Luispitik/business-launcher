@@ -42,7 +42,7 @@ Scope: personal (shared: false)
       const deliverables = (state.deliverables || []).length;
 
       // Mostrar resumen visual
-      const modules = ['00','01','02','03','04','05','06'];
+      const modules = ['00','01','02','03','04','05','06','07'];
       const skipped = state.route.skipped_modules || [];
       const optional = state.route.optional_modules || [];
       const icons = modules.map(m => {
@@ -54,7 +54,7 @@ Scope: personal (shared: false)
 
       el.innerHTML = '<div style="font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px">Sesión anterior encontrada</div>'
         + '<div style="margin-bottom:4px"><b>Ruta:</b> ' + route.charAt(0).toUpperCase() + route.slice(1) + ' — ' + name + '</div>'
-        + '<div style="margin-bottom:4px"><b>Progreso:</b> Intake ' + icons[0] + ' M1 ' + icons[1] + ' M2 ' + icons[2] + ' M3 ' + icons[3] + ' M4 ' + icons[4] + ' M5 ' + icons[5] + ' M6 ' + icons[6] + '</div>'
+        + '<div style="margin-bottom:4px"><b>Progreso:</b> Intake ' + icons[0] + ' M1 ' + icons[1] + ' M2 ' + icons[2] + ' M3 ' + icons[3] + ' M4 ' + icons[4] + ' M5 ' + icons[5] + ' M6 ' + icons[6] + ' M7 ' + icons[7] + '</div>'
         + '<div style="margin-bottom:4px"><b>Entregables:</b> ' + deliverables + ' generados</div>'
         + '<div style="margin-bottom:12px"><b>Completado:</b> ' + pct + '%</div>';
 
@@ -141,7 +141,7 @@ Si el usuario pide reiniciar:
   "user_profile": {
     "name": "",
     "location": "",
-    "situation": "explorador | definidor | redefinidor | escalador",
+    "situation": "explorador | definidor | redefinidor | activador | escalador",
     "problem_statement": "",
     "differential": "",
     "existing_clients": false,
@@ -180,12 +180,12 @@ Si el usuario pide reiniciar:
   },
 
   "route": {
-    "assigned": "explorador | definidor | redefinidor | escalador",
+    "assigned": "explorador | definidor | redefinidor | activador | escalador",
     "reassigned_from": null,
     "reassignment_reason": null,
-    "module_sequence": ["00", "01", "02", "03", "04", "05", "06"],
+    "module_sequence": ["00", "01", "02", "03", "04", "05", "06", "07"],
     "skipped_modules": [],
-    "optional_modules": ["06"]
+    "optional_modules": ["06", "07"]
   },
 
   "progress": {

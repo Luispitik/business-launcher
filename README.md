@@ -18,6 +18,7 @@ Business Launcher es una skill para Claude (claude.ai) que actúa como socio est
 - **Plan de 90 días** — 13 semanas con tareas concretas, herramientas y métricas
 - **Prompt web** — Instrucción lista para Claude Code que genera tu web profesional
 - **Estrategia de captación** — Sistema completo de adquisición de clientes
+- **Persistencia entre sesiones** — Retoma donde lo dejaste; el progreso se guarda de forma invisible, sin que gestiones archivos
 
 ## 5 rutas adaptativas
 

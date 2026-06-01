@@ -123,7 +123,7 @@ Instrucción para Claude Code:
 Muéstramela para validación. Solo tras mi OK, construye el resto."
 
 ## STACK TÉCNICO
-Next.js 14 + TypeScript + Tailwind CSS + App Router
+Next.js (App Router) + TypeScript + Tailwind CSS
 Deploy: Vercel
 [Integraciones según el negocio]
 
@@ -137,7 +137,7 @@ Para cada página:
 
 ## INTEGRACIONES
 [Según necesidad:]
-- Formulario de contacto (webhook n8n / Formspree / nativo)
+- Formulario de contacto (Formspree / Resend / endpoint API nativo)
 - Chat widget (Anthropic API / Crisp / Tawk)
 - Calendario (Calendly / Cal.com embed)
 - Analytics (Plausible / GA4)

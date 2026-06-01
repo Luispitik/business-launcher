@@ -144,9 +144,9 @@ Fallo: el flujo no se interrumpe.
 |---|-----------|---------|--------|--------|
 | 1 | Brief de negocio | DOCX | Intake | Siempre |
 | 2 | Investigación de mercado | HTML | M1 | Siempre |
-| 3 | Estrategia de captación | DOCX | M7 | Activador / opcional otras |
-| 4 | Modelo de negocio y oferta | DOCX | M2 | Siempre |
-| 5 | Manual de marca + logo | DOCX + PNG/SVG | M3 | Según ruta |
-| 6 | Pack contractual (4 docs) | 4×DOCX | M4 | Según ruta |
-| 7 | Plan de 90 días | DOCX | M5 | Siempre |
-| 8 | Prompt web + mockups | MD + HTML | M6 | Opcional |
+| 3 | Modelo de negocio y oferta | DOCX | M2 | Siempre |
+| 4 | Manual de marca + logo | DOCX + PNG/SVG | M3 | Según ruta |
+| 5 | Pack contractual (4 docs) | 4×DOCX | M4 | Según ruta |
+| 6 | Plan de 90 días | DOCX | M5 | Siempre |
+| 7 | Prompt web + mockups | MD + HTML | M6 | Opcional |
+| 8 | Estrategia de captación | DOCX | M7 | Activador / opcional otras |
