@@ -41,20 +41,23 @@ Scope: personal (shared: false)
       const pct = state.progress.completion_percentage || 0;
       const deliverables = (state.deliverables || []).length;
 
-      // Mostrar resumen visual
-      const modules = ['00','01','02','03','04','05','06','07'];
+      // Mostrar resumen visual (solo los módulos de la ruta asignada)
+      const labels = {'00':'Intake','01':'M1','02':'M2','03':'M3','04':'M4','05':'M5','06':'M6','07':'M7'};
       const skipped = state.route.skipped_modules || [];
-      const optional = state.route.optional_modules || [];
-      const icons = modules.map(m => {
+      const sequence = (state.route.module_sequence && state.route.module_sequence.length)
+        ? state.route.module_sequence
+        : ['00','01','02','03','04','05','06','07'];
+      const iconFor = (m) => {
         if (completed.includes(m)) return '✅';
         if (skipped.includes(m)) return '⏭️';
         if (m === current) return '⏳';
         return '⬜';
-      });
+      };
+      const progress = sequence.map(m => (labels[m] || m) + ' ' + iconFor(m)).join(' ');
 
       el.innerHTML = '<div style="font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px">Sesión anterior encontrada</div>'
         + '<div style="margin-bottom:4px"><b>Ruta:</b> ' + route.charAt(0).toUpperCase() + route.slice(1) + ' — ' + name + '</div>'
-        + '<div style="margin-bottom:4px"><b>Progreso:</b> Intake ' + icons[0] + ' M1 ' + icons[1] + ' M2 ' + icons[2] + ' M3 ' + icons[3] + ' M4 ' + icons[4] + ' M5 ' + icons[5] + ' M6 ' + icons[6] + ' M7 ' + icons[7] + '</div>'
+        + '<div style="margin-bottom:4px"><b>Progreso:</b> ' + progress + '</div>'
         + '<div style="margin-bottom:4px"><b>Entregables:</b> ' + deliverables + ' generados</div>'
         + '<div style="margin-bottom:12px"><b>Completado:</b> ' + pct + '%</div>';
 
