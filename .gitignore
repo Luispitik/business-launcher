@@ -2,3 +2,9 @@
 Thumbs.db
 *.bak
 *.tmp
+*.log
+
+# Material de trabajo local (no forma parte de la skill publicada)
+CLAUDE.md
+entregables-business-launcher/
+.claude/
