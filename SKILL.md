@@ -1,28 +1,30 @@
 ---
 name: business-launcher
 version: 3.0.0
-author: NorteIA / SalgadoIA — Luis Salgado (https://norteia.es | https://salgadoia.com)
+author: Luis Salgado (https://salgadoia.com)
 license: MIT
 repository: https://github.com/Luispitik/business-launcher
 description: >
-  Skill orquestadora que guía a un profesional desde una idea de negocio
-  hasta una empresa operativa. Arquitectura modular con 5 rutas adaptativas
-  (Explorador, Definidor, Redefinidor, Activador, Escalador), persistencia
-  invisible entre sesiones, capa transversal de factores humanos, y sistema
-  de calibración de perfil. Cubre: descubrimiento → modelo de negocio →
-  oferta → precios → marca → documentos → captación → plan 90 días.
-  NO incluye implementación técnica.
+  Skill orquestadora para el profesional o despacho que ya factura y quiere
+  sistematizar una línea de servicio: la lleva de idea a oferta definida,
+  precios justificados, documentos contractuales y plan de 90 días.
+  Arquitectura modular con 5 rutas adaptativas (Escalador, Activador,
+  Redefinidor, Definidor, Explorador), persistencia invisible entre sesiones,
+  capa transversal de factores humanos y sistema de calibración de perfil.
+  Cubre: descubrimiento → modelo de negocio → oferta → precios → marca →
+  documentos → captación → plan 90 días. NO incluye implementación técnica.
   USAR SIEMPRE cuando el usuario diga "business launcher", "montar un negocio",
   "construir mi empresa", "lanzar mi negocio", "diseñar mi oferta",
+  "sistematizar un servicio", "productizar mi servicio", "subir mis precios",
   "no sé qué negocio montar", "no me entran clientes", "quiero escalar",
   "reestructurar mi negocio", o cualquier referencia a crear, lanzar o
   mejorar un negocio de servicios.
 target_user:
-  - Profesional sin idea clara (Explorador)
-  - Profesional que arranca desde cero (Definidor)
-  - Profesional que pivota o reestructura (Redefinidor)
+  - Profesional que ya factura y quiere escalar o productizar (Escalador)
   - Profesional con todo montado sin clientes (Activador)
-  - Profesional que ya factura y quiere escalar (Escalador)
+  - Profesional que pivota o reestructura una línea de servicio (Redefinidor)
+  - Profesional con idea clara que arranca desde cero (Definidor)
+  - Profesional sin dirección definida (Explorador)
 mode: conversacional_guiado
 skills_requeridas:
   - docx
@@ -34,9 +36,8 @@ skills_opcionales:
 
 # BUSINESS LAUNCHER v3 — Orquestador
 
-> Creado por [NorteIA](https://norteia.es) / [SalgadoIA](https://salgadoia.com) — Luis Salgado
+> Creado por Luis Salgado — [salgadoia.com](https://salgadoia.com)
 > Licencia: MIT — Uso, modificación y redistribución libres (incluso comerciales); conserva el aviso de copyright.
-> ¿Quieres skills como esta personalizadas para tu negocio? → [norteia.es](https://norteia.es)
 
 ## FILOSOFÍA
 
