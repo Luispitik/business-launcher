@@ -4,7 +4,7 @@ import pathlib, re, sys
 ALLOWED = {'name', 'description', 'license', 'compatibility', 'metadata', 'allowed-tools'}
 def check(d):
     d = pathlib.Path(d).resolve(); errs = []
-    text = (d / 'SKILL.md').read_text(encoding='utf-8')
+    text = (d / 'SKILL.md').read_text(encoding='utf-8').replace(chr(13) + chr(10), chr(10))
     m = re.match(r'^---\n(.*?)\n---\n', text, re.S)
     if not m: return ['SKILL.md sin frontmatter']
     fm = m.group(1)
