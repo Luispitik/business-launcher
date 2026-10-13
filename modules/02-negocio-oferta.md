@@ -21,7 +21,7 @@ Cada rango de precio cita al menos tres comparables de alcance equivalente con e
 
 ## Precio suelo
 
-Precio suelo = (ingreso neto mensual que necesita + cuota de autónomos + gastos fijos + reserva para IRPF) ÷ horas facturables reales al mes, descontando las horas de captación, gestión y formación. Ningún precio óptimo por debajo del suelo sin decirlo. Recuerda que el IVA cobrado no es ingreso: a empresas, el precio se da sin IVA; a particulares, el precio final con impuestos.
+Precio suelo = (ingreso neto mensual que necesita + cuota de autónomos + gastos fijos + reserva para IRPF) ÷ horas facturables reales al mes, descontando las horas de captación, gestión y formación. Ningún precio óptimo por debajo del suelo sin decirlo. La cuota, la reserva de IRPF y los impuestos que entran en el cálculo se verifican como cualquier punto legal (ver M4), y también cómo debe presentarse el precio según el tipo de cliente. Recuerda que el IVA que se cobra no es ingreso.
 
 ## Coherencia con lo que ha contado
 
@@ -56,7 +56,7 @@ Presenta cada precio con su progresión: lanzamiento, primer ajuste (y la condic
 Para quien arranca o reorienta: piloto reducido a precio simbólico, precio de fundador con fecha límite, o diagnóstico sin coste a cambio de opinión y permiso para contarlo como caso. Recomienda una opción según perfil y urgencia, con estas condiciones:
 - El testimonio es la opinión real del cliente, con sus palabras y su consentimiento por escrito (y el de imagen si sale en vídeo); si recibió el servicio gratis o con descuento, se indica al publicarlo.
 - La fecha límite y las plazas del precio de fundador son ciertas y se cumplen.
-- En profesiones sanitarias la publicidad con testimonios de pacientes está prohibida, y otras profesiones colegiadas tienen normas propias: confírmalo con su colegio antes de proponerlo.
+- Antes de proponer testimonios o promociones, investiga y contrasta las normas de publicidad que aplican a su actividad: las profesiones sanitarias y otras colegiadas tienen restricciones específicas, y las reglas de prácticas comerciales protegen al consumidor. Si no se puede verificar, no lo propongas.
 
 Para Escalador, en su lugar: cómo comunicar la subida a los clientes actuales y cuándo aplicarla.
 

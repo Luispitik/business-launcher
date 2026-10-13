@@ -35,12 +35,12 @@ La red de contactos existente (canal 0) va siempre primero, porque es inmediata 
 
 Las velocidades son orientativas; los costes concretos, con búsqueda web y fecha.
 
-**Reglas de cumplimiento**, antes de proponer cualquier canal. En España las comunicaciones comerciales por correo electrónico o medios equivalentes exigen consentimiento previo del destinatario, también cuando es una empresa (LSSI, art. 21), con sanciones que suben si el envío es masivo; y los datos que se recopilan están sujetos al RGPD. Por eso:
+**Reglas de cumplimiento**, antes de proponer cualquier canal. Investiga y contrasta en ese momento la norma vigente sobre comunicaciones comerciales electrónicas y protección de datos para el canal que vayas a proponer (en España, la LSSI y el RGPD son el punto de partida de la búsqueda; comprueba también si aplican a destinatarios que son empresas), y cita las fuentes con fecha. Mientras no esté verificado, aplica este criterio prudente:
 1. Nada de correo, SMS ni WhatsApp comercial a quien no lo haya pedido, salvo clientes con contrato previo y para servicios similares.
 2. Nada de comprar bases de datos ni de extraer datos de perfiles o webs.
 3. El primer contacto con un desconocido es individual y por una vía en la que esa persona se ha hecho contactable: su formulario, un evento, la presentación de alguien en común o una conexión aceptada.
 4. Si se guardan sus datos, en el primer contacto se dice quién eres, para qué los usas y cómo oponerse.
-5. En LinkedIn, invitaciones y mensajes individuales escritos por la persona, en un volumen que pueda personalizar a mano: sin automatizadores ni extractores de perfiles, que LinkedIn prohíbe.
+5. En LinkedIn, invitaciones y mensajes individuales escritos por la persona, en un volumen que pueda personalizar a mano, sin automatizadores ni extractores de perfiles (comprueba las condiciones de uso vigentes de la plataforma).
 
 ## Sistema
 

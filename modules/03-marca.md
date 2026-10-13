@@ -7,7 +7,7 @@ Una identidad verbal y visual coherente con la oferta de M2. El alcance depende 
 ## Contenido
 
 ### Nombre (si no lo tiene)
-Tres opciones valoradas por memorabilidad, coherencia con el posicionamiento y pronunciación en español (y en inglés si vende fuera). Busca en la web si hay negocios, marcas o webs activas con ese nombre en su sector. La disponibilidad del dominio y de la marca registrada no se confirma con una búsqueda: márcala `[PENDIENTE: comprobar en un registrador de dominios, en la OEPM y, si vende fuera de España, en la EUIPO]`. Si será una sociedad, añade la certificación negativa de denominación del Registro Mercantil Central.
+Tres opciones valoradas por memorabilidad, coherencia con el posicionamiento y pronunciación en español (y en inglés si vende fuera). Busca en la web si hay negocios, marcas o webs activas con ese nombre en su sector. La disponibilidad del dominio y de la marca registrada no se confirma con una búsqueda: márcala `[PENDIENTE: comprobar en un registrador de dominios, en la OEPM y, si vende fuera de España, en la EUIPO]`. Si será una sociedad, comprueba también el trámite vigente para reservar la denominación social.
 
 ### Sistema verbal
 Nombre, frase de posicionamiento, tono de voz en tres adjetivos, dos o tres ejemplos de lo que la marca nunca diría, palabras clave, presentación de 30 segundos y biografía profesional corta.
@@ -16,7 +16,7 @@ Nombre, frase de posicionamiento, tono de voz en tres adjetivos, dos o tres ejem
 Paleta (primario, secundario, acento y neutros, con HEX y RGB), tipografías para titulares y texto con su jerarquía, estilo de iconografía y de fotografía.
 
 ### Logo
-Si la persona es diseñadora o va a encargarlo, entrega un brief creativo en lugar del logo. Si no, y la skill `canvas-design` está disponible, genera el logo principal, la versión solo símbolo, las variantes clara y oscura y el favicon: SVG como fuente y PNG en alta resolución exportado desde él (si el entorno no puede rasterizar, entrega el SVG y di que el PNG queda pendiente). Debe funcionar a tamaño pequeño y distinguirse de los competidores de M1. Un logo generado con IA puede no estar protegido por derechos de autor: si es importante para el negocio, la vía es registrarlo como marca tras comprobar que no se parece a marcas ya inscritas.
+Si la persona es diseñadora o va a encargarlo, entrega un brief creativo en lugar del logo. Si no, y la skill `canvas-design` está disponible, genera el logo principal, la versión solo símbolo, las variantes clara y oscura y el favicon: SVG como fuente y PNG en alta resolución exportado desde él (si el entorno no puede rasterizar, entrega el SVG y di que el PNG queda pendiente). Debe funcionar a tamaño pequeño y distinguirse de los competidores de M1. Si el logo se genera con IA, investiga y contrasta qué protección tiene según la normativa vigente y avisa de que, si es importante para el negocio, conviene consultar su registro como marca tras comprobar que no se parece a marcas ya inscritas.
 
 ## Entregable
 

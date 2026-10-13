@@ -72,7 +72,8 @@ En cada fase recibes un entregable y nada avanza sin que lo confirmes. Las rutas
 **Lo que la diferencia:**
 
 - **Precios calibrados a tu perfil real.** A quien arranca no se le ponen precios de veterano, y cada precio se ancla en comparables del mercado, no en lo que "suena bien". Los modelos de lenguaje tienden a inflar precios y plazos; la skill lo compensa con datos.
-- **Datos verificados.** Precios de herramientas, competidores y normativa se comprueban con la búsqueda web y llevan fuente y fecha. Si no hay búsqueda web, se marcan `[VERIFICAR]` en lugar de inventarse.
+- **Datos verificados.** Precios de herramientas y competidores se comprueban con la búsqueda web y llevan fuente y fecha. Si no hay búsqueda web, se marcan `[VERIFICAR]` en lugar de inventarse.
+- **Lo legal, investigado cada vez.** La skill no trae respuestas legales escritas: en cada uso investiga cada punto (altas, impuestos, facturación, protección de datos, publicidad…) en la fuente oficial, lo contrasta con una segunda fuente y te da ambas con fecha. Lo que no se puede verificar queda marcado para tu gestoría o tu abogado.
 - **Factores humanos.** Urgencia económica, bloqueos y experiencias previas cambian el plan: con un mes de colchón, el plan es de 30 días y busca ingresos ya. Es pragmático, no terapia.
 - **Debate, no validación.** Propone, cuestiona su propia propuesta y te señala lo que no encaja con lo que has contado.
 

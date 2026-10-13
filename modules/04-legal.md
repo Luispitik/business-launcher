@@ -2,11 +2,18 @@
 
 ## Objetivo
 
-Que la persona sepa qué obligaciones tiene para operar en España y tenga los documentos comerciales que necesita para vender. Parte de la oferta de M2 y de su situación (intake: situación laboral, tipo de cliente y si la actividad está regulada).
+Que la persona sepa qué tiene que comprobar para operar legalmente en España y tenga los documentos comerciales que necesita para vender. Parte de la oferta de M2 y de su situación (intake: situación laboral, tipo de cliente y si la actividad está regulada).
 
-Todo lo que genera este módulo es un **borrador de trabajo**: cada documento lleva en la cabecera "Borrador de trabajo generado con IA; revísalo con un abogado o una gestoría antes de usarlo o firmarlo", porque la persona lo enviará a clientes reales.
+## Cómo se trata lo legal
 
-Las cuotas, los tipos, los plazos y las fechas de entrada en vigor cambian a menudo (en 2026 el marco de cotización de autónomos cambió varias veces y las fechas de VERI*FACTU y de la factura electrónica se han movido): no los escribas de memoria. Búscalos en fuentes oficiales (BOE, Agencia Tributaria, Seguridad Social, SEPE, AEPD) y cítalos con la fecha de consulta; si hay un aplazamiento anunciado pero no publicado en el BOE, di las dos cosas. Sin búsqueda web, márcalos `[VERIFICAR]`. No improvises regulación sectorial: si la actividad está regulada, nómbralo y remite al colegio o a un profesional.
+Este módulo no contiene respuestas legales: contiene los puntos que hay que investigar. Las normas, las cuotas, los modelos, los plazos y las fechas de entrada en vigor cambian a menudo y se anuncian cambios antes de publicarse, así que nada de lo legal se escribe de memoria ni se toma de este archivo como cierto. Para cada punto que aplique a esta persona:
+
+1. Investígalo en ese momento en la fuente oficial primaria (BOE, Agencia Tributaria, Seguridad Social, SEPE, AEPD, DOUE o el colegio profesional que corresponda).
+2. Contrástalo con una segunda fuente independiente y reciente (otra fuente oficial, o una publicación de un despacho o de una asociación profesional).
+3. Escribe la conclusión con ambas fuentes y la fecha de consulta.
+4. Si las fuentes no coinciden, si hay un cambio anunciado que aún no está publicado o si no lo puedes verificar, dilo así y márcalo `[VERIFICAR con gestoría/abogado]`. Sin búsqueda web, todo el módulo queda como `[VERIFICAR]`.
+
+Todo lo que genera este módulo es un **borrador de trabajo**: cada documento lleva en la cabecera "Borrador de trabajo generado con IA; revísalo con un abogado o una gestoría antes de usarlo o firmarlo", porque la persona lo enviará a clientes reales. No improvises regulación sectorial: si la actividad está regulada, nómbralo y remite al colegio o a un profesional.
 
 Si hay instalada una skill de contratos genérica, lee su SKILL.md y úsala con los datos de esta persona. No uses una skill de contratos ligada a otra empresa (con sus datos fiscales o su marca): los documentos saldrían con el prestador equivocado.
 
@@ -23,39 +30,41 @@ Si hay instalada una skill de contratos genérica, lee su SKILL.md y úsala con 
 
 ## Documento 0 — Checklist de arranque
 
-Adaptada a su caso, con cada punto marcado "confirmar con gestoría" y la fuente oficial verificada:
+Para cada punto que aplique, la pregunta que hay que responder con fuentes verificadas y contrastadas. Cada punto se cierra con "confirmar con gestoría".
 
-1. **Forma de operar.** Autónomo; sociedad limitada (se puede constituir con 1 € de capital, pero mientras no llegue a 3.000 € destina el 20 % del beneficio a reserva legal y, si se liquida, los socios responden solidariamente de la diferencia hasta 3.000 €); sociedad profesional, obligatoria si una sociedad ejerce una profesión colegiada; o cooperativa de trabajo asociado. Da criterios según su volumen previsto; la elección se toma con la gestoría. No recomiendes cooperativas de facturación para evitar el alta.
-2. **Alta en Hacienda** con el modelo 036 antes de empezar, con el epígrafe correcto (actividad profesional o empresarial: cambia la retención).
-3. **Alta en la Seguridad Social** (régimen de autónomos) antes de empezar, con la cuota y las reducciones del año en curso de fuente oficial. Facturar poco no exime del alta.
-4. **Compatibilidades.** Si trabaja por cuenta ajena, revisar su contrato (pactos de plena dedicación o de no competencia); si es empleado público, la autorización de compatibilidad; si cobra el paro, consultar al SEPE la compatibilidad o la capitalización antes del alta.
-5. **Facturación.** IVA (y si alguna exención, como ciertos servicios sanitarios o de formación, aplica a su caso); retención de IRPF cuando factura una actividad profesional a empresas o profesionales; clientes de otros países de la UE (registro de operadores intracomunitarios e inversión del sujeto pasivo). Un programa de facturación cuyo fabricante haya emitido la declaración responsable de VERI*FACTU, y las fechas vigentes de VERI*FACTU y de la factura electrónica entre empresas, verificadas.
-6. **Declaraciones periódicas**, según el calendario del contribuyente de la Agencia Tributaria del año.
-7. **Protección de datos como responsable.** Registro de actividades de tratamiento, información a clientes y contactos, contratos con quienes tratan datos por su cuenta (gestoría, alojamiento web, CRM, correo, herramientas de IA) y transferencias fuera del Espacio Económico Europeo. Para empezar, la herramienta gratuita Facilita RGPD de la AEPD. Los datos de salud son categoría especial.
-8. **Web y comunicaciones comerciales**: ver el bloque legal de M6 y las reglas de captación de M7 (nada de correos comerciales sin consentimiento).
-9. **Actividad regulada o colegiada.** Colegiación, seguro de responsabilidad civil si es obligatorio, normas de publicidad del colegio y del sector. Los colegios no pueden fijar baremos de honorarios: no los uses como referencia de precio.
-10. **Uso de IA.** Si usa IA en el servicio: medidas para que quien la usa tenga la formación adecuada y aviso a los clientes cuando interactúan con una IA o reciben contenido que deba identificarse, según el calendario vigente del Reglamento europeo de IA (verifícalo, porque se ha modificado).
-11. **Nombre.** Comprobación en la OEPM (y en la EUIPO si vende fuera) y, si es sociedad, certificación negativa de denominación del Registro Mercantil Central.
-12. **Local**: licencia de actividad si atiende en un local propio.
+1. **Forma de operar.** ¿Autónomo, sociedad limitada, sociedad profesional o cooperativa? Requisitos de capital y obligaciones de cada forma, cuándo es obligatoria la sociedad profesional y qué conviene a su volumen previsto. La elección se toma con la gestoría. No recomiendes fórmulas para facturar sin darse de alta.
+2. **Alta en Hacienda.** Qué modelo y qué epígrafe corresponden a su actividad (profesional o empresarial) y cuándo hay que presentarlo.
+3. **Alta en la Seguridad Social.** Cuándo es obligatoria en su caso, la cuota y las reducciones vigentes este año.
+4. **Compatibilidades.** Si trabaja por cuenta ajena, si su contrato tiene pactos que lo limiten; si es empleado público, qué autorización necesita; si cobra prestación por desempleo, si es compatible o capitalizable.
+5. **Impuestos y facturación.** Qué IVA aplica a sus servicios (y si alguna exención le afecta), si debe practicar o soportar retención de IRPF, qué cambia con clientes de otros países, qué requisitos deben cumplir sus facturas y qué obligaciones de facturación electrónica o de sistemas de facturación le afectan y desde cuándo.
+6. **Declaraciones periódicas** que le tocan, según el calendario oficial del año.
+7. **Protección de datos como responsable.** Qué registros, cláusulas informativas y contratos con proveedores que traten datos por su cuenta necesita (gestoría, alojamiento, CRM, correo, herramientas de IA), qué ocurre si hay transferencias fuera del Espacio Económico Europeo y qué exige tratar categorías especiales de datos, como los de salud. La AEPD ofrece herramientas gratuitas de ayuda: compruébalas.
+8. **Web y comunicaciones comerciales**: ver el bloque legal de M6 y las reglas de captación de M7.
+9. **Actividad regulada o colegiada.** Colegiación, seguro de responsabilidad civil, normas de publicidad y cualquier límite sobre honorarios. No uses baremos de honorarios como referencia de precio sin verificar que son legales y vigentes.
+10. **Uso de IA.** Si usa IA en el servicio, qué obligaciones le aplican hoy (formación de quien la usa, información a los clientes cuando interactúan con una IA o reciben contenido generado) según el calendario vigente del Reglamento europeo de IA y la normativa española.
+11. **Nombre.** Qué registros consultar antes de usarlo (marcas, denominaciones sociales si es sociedad) y cómo protegerlo.
+12. **Local.** Si atiende en un local propio, qué licencias necesita según su municipio.
 
 ## Documentos comerciales
 
+Los documentos llevan los apartados de abajo. Las condiciones con contenido legal (plazos de pago, cesión de derechos, desistimiento, protección de datos, cláusulas con consumidores, resolución de conflictos) se redactan después de investigar y contrastar la norma vigente, como en la checklist.
+
 **Si vende a empresas o profesionales:**
-1. **Propuesta comercial tipo**: problema y solución, alcance y entregables, fases, equipo, precio sin IVA y retención si aplica, validez de la oferta, forma de pago (30 días por defecto y nunca más de 60 entre empresas) y próximos pasos.
-2. **Contrato de prestación de servicios**: objeto, precio y pago, plazos, cesión de propiedad intelectual por escrito que detalle derechos, modalidades, duración y territorio (reservando sus herramientas y conocimiento previos), confidencialidad, límite de responsabilidad (nunca por dolo), resolución, una cláusula de negociación previa documentada antes de acudir a los tribunales y jurisdicción española. Si el servicio usa IA: qué herramientas y con qué datos, que los datos del cliente no se usan para entrenar modelos de terceros según los términos contratados, revisión humana de los entregables y reparto de responsabilidades.
-3. **Acuerdo de confidencialidad**, cuando vaya a recibir información sensible: bidireccional, con plazo (tres años como punto de partida).
-4. **Contrato de encargado del tratamiento**, cuando trate datos personales por cuenta del cliente: con el contenido del artículo 28.3 del RGPD (instrucciones, confidencialidad, medidas de seguridad, subencargados con autorización, incluidos los proveedores de IA, asistencia, devolución o supresión, auditorías y transferencias internacionales).
+1. **Propuesta comercial tipo**: problema y solución, alcance y entregables, fases, equipo, precio (con el tratamiento de impuestos y retenciones verificado), validez de la oferta, forma y plazo de pago, y próximos pasos.
+2. **Contrato de prestación de servicios**: objeto, precio y pago, plazos, propiedad intelectual (qué derechos se ceden, cómo, por cuánto tiempo y dónde, reservando sus herramientas y conocimiento previos), confidencialidad, responsabilidad, resolución, cómo se resuelven los conflictos y jurisdicción. Si el servicio usa IA: qué herramientas y con qué datos, cómo se protegen los datos del cliente frente a terceros, revisión humana de los entregables y reparto de responsabilidades.
+3. **Acuerdo de confidencialidad**, cuando vaya a recibir información sensible del cliente.
+4. **Contrato de encargado del tratamiento**, cuando trate datos personales por cuenta del cliente, con el contenido mínimo que exija la normativa vigente (incluidos los proveedores de IA como subencargados).
 
 **Si vende a particulares:**
-1. **Condiciones del servicio**: qué incluye, precio final con impuestos, pago, cancelación y, si contrata a distancia, información previa, derecho de desistimiento de 14 días (con consentimiento expreso si el servicio empieza dentro del plazo) y su formulario. Sin límites de responsabilidad ni sumisión a un fuero, que con consumidores son nulos.
+1. **Condiciones del servicio**: qué incluye, precio, pago, cancelación y, si contrata a distancia, la información previa y el derecho de desistimiento que correspondan. Comprueba qué cláusulas no son válidas con consumidores.
 2. **Información de protección de datos** para sus clientes.
-3. **Profesiones sanitarias o de psicología**: consentimiento informado y tratamiento de datos de salud según las pautas de su colegio.
-4. **Abogacía**: hoja de encargo e información sobre honorarios.
+3. **Profesiones sanitarias o de psicología**: consentimiento informado y tratamiento de datos de salud, según las pautas de su colegio.
+4. **Abogacía**: los documentos de encargo y de información de honorarios que exija su normativa.
 
 ## Entregable
 
-DOCX con la checklist y un DOCX por documento comercial, todos con la nota de borrador. Registra en la ficha qué se generó y qué queda pendiente de revisar con un profesional.
+DOCX con la checklist (cada punto con su conclusión, sus dos fuentes y la fecha, o marcado `[VERIFICAR]`) y un DOCX por documento comercial, todos con la nota de borrador. Registra en la ficha qué se generó y qué queda pendiente de revisar con un profesional.
 
 ## Checkpoint
 
-> Aquí tienes tu checklist de arranque y los documentos. ¿Quieres adaptar alguno a un cliente o a un sector concreto antes de seguir?
+> Aquí tienes tu checklist de arranque y los documentos. Lo legal está comprobado a fecha de hoy con las fuentes que ves en cada punto, pero tiene que revisarlo tu gestoría o tu abogado. ¿Quieres adaptar algún documento a un cliente o a un sector concreto antes de seguir?

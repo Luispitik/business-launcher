@@ -24,12 +24,11 @@ Versión adaptada a los modelos actuales de Claude (Opus 5.5, Fable 5.1, Sonnet 
 - M2 distingue clientes empresa y particulares, condiciona los servicios técnicos al perfil y, en Escalador, trata cómo comunicar la subida de precios.
 - M6 elige herramienta según el perfil (constructor sin código o Claude Code) y evita los estilos visuales por defecto de las webs generadas.
 
-### Contenido legal y comercial (España, revisado el 13-10-2026)
-- M4 pasa a "Documentación de arranque": checklist de obligaciones (forma jurídica, modelo 036, alta en autónomos, compatibilidades, IVA e IRPF, VERI*FACTU y factura electrónica, protección de datos como responsable, actividad colegiada, uso de IA, nombre y local) y documentos distintos para clientes empresa y particulares. Cuotas, tipos y fechas no se fijan en el texto: se verifican en fuente oficial en cada uso.
-- Contratos: cesión de propiedad intelectual detallada, plazos de pago entre empresas, negociación previa antes de demandar, contenido del encargado de tratamiento (incluidos proveedores de IA) y nada de límites de responsabilidad ni fuero con consumidores. Todos los documentos llevan la nota de borrador generado con IA.
-- M7 retira el correo comercial en frío: en España exige consentimiento previo también entre empresas (LSSI, art. 21). Reglas de contacto individual, LinkedIn sin automatizadores y métricas presentadas como hipótesis.
-- M2 añade el precio suelo (neto necesario, cuota, gastos e IRPF entre horas facturables reales), exige comparables con fuente para subir precios y fija condiciones para testimonios y precios de fundador. M6 prohíbe la prueba social inventada y actualiza el bloque legal de la web (cookies con "Rechazar", casilla comercial, desistimiento, aviso de IA).
-- El alta se hace antes del primer encargo cobrado, no antes de validar; aviso de falso autónomo al delegar.
+### Contenido legal y comercial
+- **Lo legal se investiga en cada uso.** La skill ya no afirma normas, cuotas, plazos ni fechas: indica qué hay que comprobar, y el modelo lo investiga punto por punto en fuente oficial, lo contrasta con una segunda fuente y cita ambas con la fecha. Si no coinciden, hay un cambio anunciado sin publicar o no se puede verificar, se marca `[VERIFICAR con gestoría/abogado]`.
+- M4 pasa a "Documentación de arranque": checklist de puntos a verificar (forma de operar, altas, compatibilidades, impuestos y facturación, protección de datos, actividad regulada, uso de IA, nombre y local) y documentos distintos para clientes empresa y particulares, todos con la nota de borrador generado con IA.
+- M7 deja de proponer el correo comercial en frío y la automatización de LinkedIn; antes de proponer un canal se verifica la norma vigente y, mientras tanto, se aplica un criterio prudente. Las métricas se presentan como hipótesis.
+- M2 añade el precio suelo, exige comparables con fuente para subir precios y fija condiciones para testimonios y precios de fundador. M6 prohíbe la prueba social inventada y construye el bloque legal de la web a partir de requisitos verificados.
 
 ### Empaquetado
 - Frontmatter conforme a la especificación de Agent Skills (`name`, `description`, `license`, `compatibility`, `metadata`).

@@ -50,21 +50,17 @@ No inventes testimonios, reseñas, logos de clientes, cifras de resultados, cert
 [Formulario de contacto, reserva de citas, analítica; solo las que necesite]
 
 ## Legal
-[Aviso legal con los datos del titular que exige el art. 10 de la LSSI (incluido el colegio y el número si es profesión colegiada) y precios con impuestos.
-Privacidad con información básica en cada formulario y una casilla separada y sin marcar para comunicaciones comerciales.
-Banner de cookies con "Rechazar" en la primera capa, al mismo nivel que "Aceptar", y sin cargar cookies no técnicas (analítica, píxeles de anuncios) antes del consentimiento.
-Si vende a particulares por internet: condiciones de contratación, información previa, derecho de desistimiento y la función de desistimiento si ya es exigible (comprobar su estado en España).
-Si hay un asistente o chatbot de IA, que se identifique como IA.
-Todos los textos legales, marcados [PENDIENTE: revisión profesional].]
+[Antes de escribir este bloque, investiga y contrasta con fuentes oficiales actuales (y una segunda fuente) los requisitos vigentes en España para: datos del titular en el aviso legal (y del colegio, si es profesión colegiada) y presentación de precios; información de privacidad en formularios y consentimiento para comunicaciones comerciales; banner y consentimiento de cookies (qué puede cargarse antes de aceptar, cómo se ofrece rechazar); venta a distancia a particulares, si aplica (condiciones, información previa, desistimiento); aviso cuando el usuario interactúa con una IA, si hay asistente; y accesibilidad, si aplica.
+Escribe aquí cada requisito verificado con su fuente y fecha. Todos los textos legales, marcados [PENDIENTE: revisión profesional].]
 
 ## SEO
 [Títulos y descripciones por página, datos estructurados del negocio, ficha local si atiende en un lugar]
 
 ## Comprobación final
 [ ] Se ve bien en móvil, tableta y escritorio
-[ ] Páginas legales completas, con los datos del titular
-[ ] Banner de cookies con "Rechazar" en la primera capa y nada no técnico antes del consentimiento
-[ ] Formulario probado, con información de privacidad y casilla comercial sin marcar
+[ ] Páginas legales completas según los requisitos verificados (con fuente y fecha)
+[ ] Banner de cookies conforme a los requisitos verificados
+[ ] Formulario probado, con la información de privacidad y el consentimiento verificados
 [ ] Toda prueba social es real y está documentada
 [ ] Favicon e imagen para compartir en redes
 [ ] Analítica instalada
