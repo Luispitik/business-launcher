@@ -1,219 +1,122 @@
 # Business Launcher
 
-**Para el profesional o despacho que ya factura y quiere sistematizar una línea de
-servicio nueva.** No es un curso de emprendimiento ni una plantilla de plan de negocio: es
-una conversación guiada con Claude que termina en oferta definida, precios justificados,
-documentos contractuales y un plan de 90 días con fechas.
+**Una skill de Claude que te entrevista, entiende en qué punto está tu negocio y construye contigo el plan completo: del "no sé qué vender" o "no me entra ni un cliente" a una oferta con precio, documentos de arranque y un plan de 90 días.**
 
-Si ya tienes clientes y lo que te falta es convertir "eso que haces bien" en un servicio
-con nombre, precio y proceso repetible, esto está hecho para ti.
+En español, pensada para España y de código abierto (MIT). Presentada en el episodio 3 de [Más allá del prompt](https://podcastmadp.com/).
 
----
-
-## Por qué el encuadre importa
-
-La mayoría de herramientas de este tipo apuntan a quien todavía no ha facturado nunca. El
-problema de ese público no es la estructura: es que aún no sabe si alguien pagará. Ninguna
-plantilla resuelve eso.
-
-Business Launcher asume lo contrario — que ya tienes demanda, criterio y algún cliente — y
-ataca lo que de verdad frena a un profesional en ese punto:
-
-- Cobra por horas y quiere cobrar por resultado, pero no sabe cómo empaquetarlo
-- Tiene tres servicios que en realidad son uno mal explicado tres veces
-- Sabe que sus precios están bajos y no tiene con qué justificar la subida
-- Hace propuestas desde cero cada vez, en Word, a las once de la noche
-- Tiene la línea de servicio nueva en la cabeza desde hace meses y sin arrancar
-
----
-
-## Las 5 rutas adaptativas
-
-El intake detecta tu situación en las primeras cuatro preguntas y reordena el proceso
-entero. No todas las rutas ejecutan los mismos módulos ni en el mismo orden.
-
-| Ruta | Situación | Foco del proceso |
+| Si te suena… | Ruta | Qué hace contigo primero |
 |---|---|---|
-| **Escalador** | Ya facturas de forma regular | Productizar, subir precios, sistematizar |
-| **Activador** | Todo montado, no entran clientes | Sistema de captación (M7 pasa al centro) |
-| **Redefinidor** | Negocio existente, quieres pivotar | Rediseño aprovechando activos, sin perder ingresos |
-| **Definidor** | Idea clara, sin ejecutar | Estructura paso a paso |
-| **Explorador** | Habilidades sí, dirección no | Descubrimiento antes de construir |
+| "Ya facturo y quiero escalar" | **Escalador** | Productizar, subir precios y sistematizar |
+| "Lo tengo todo montado y no entra ni un cliente" | **Activador** | Diagnosticar por qué y diseñar tu captación |
+| "El negocio existe, pero quiero pivotar" | **Redefinidor** | Rediseñar sin perder los ingresos actuales |
+| "Tengo la idea clara, pero no he arrancado" | **Definidor** | Mercado, oferta y precio para empezar con orden |
+| "Tengo habilidades, pero ninguna dirección" | **Explorador** | Comparar 2-3 nichos reales y validar con conversaciones antes de construir |
 
-Las tres primeras son el caso central. Las dos últimas siguen soportadas y funcionan, pero
-si estás ahí, lo que necesitas primero son diez conversaciones con clientes potenciales, no
-un plan — y la ruta Explorador te va a llevar exactamente a eso.
+**Empieza así:**
 
-**La ruta se puede reasignar a mitad.** Si durante el proceso queda claro que un
-"Definidor" en realidad ya tiene un negocio que redefinir, se cambia y se registra el
-cambio.
+```
+business launcher. Soy [profesión] en [ciudad]. Ahora mismo [tu situación en una frase].
+Se me da bien [...]. Puedo dedicarle [horas a la semana].
+```
 
----
-
-## Las 8 fases
-
-| # | Fase | Qué produce |
-|---|---|---|
-| 0 | **Intake adaptativo** | Ruta detectada, perfil calibrado, brief de negocio |
-| 1 | **Investigación de mercado** | Competidores, precios reales, huecos, canales |
-| 2 | **Modelo de negocio y oferta** | ICP, propuesta de valor, catálogo con pricing y márgenes |
-| 3 | **Identidad de marca** | Naming, logo, paleta, tipografía, manual |
-| 4 | **Documentación legal** | Propuesta tipo, NDA, DPA, contrato de servicios |
-| 5 | **Plan de 90 días** | 13 semanas con tareas, herramientas y métricas |
-| 6 | **Prompt web** | Instrucción lista para que un agente construya tu web |
-| 7 | **Captación y ventas** | Sistema de adquisición completo |
-
-Según la ruta, algunas fases se saltan (si ya tienes marca sólida, la 3 no se ejecuta) y
-otras cambian de orden (en Activador, la 7 va antes que la 2).
-
-### Tres detalles que marcan la diferencia
-
-**El pricing se calibra al perfil real, no al ideal.** Hay una tabla obligatoria que
-clasifica al usuario en cuatro niveles y ancla el precio al cuartil de mercado que le
-corresponde. A quien arranca no se le ponen precios de veterano: el síndrome del impostor
-ya frena bastante, y un precio que no puedes decir en voz alta sin tartamudear no se cobra.
-
-**Los precios de herramientas se verifican con búsqueda web, siempre.** Nunca de memoria.
-Un stack recomendado con precios de hace dos años es un presupuesto roto.
-
-**Hay una capa de factores humanos** que se activa en el intake, en el diseño de la oferta
-y en el plan de 90 días. Miedo a vender, urgencia financiera, fracasos previos, resistencia
-a delegar. No es decoración: cambia el plan. Con colchón de tres meses, el primer sprint
-apunta a ingreso en 30 días; sin él, el plan es otro.
-
----
-
-## Qué NO hace
-
-Decirlo genera más confianza que ocultarlo:
-
-- **No incluye implementación técnica.** Ni código, ni despliegue, ni configuración de
-  herramientas, ni montar la web. La fase 6 genera el *prompt* para construirla; ejecutarlo
-  es otro trabajo con otra herramienta.
-- **No constituye tu empresa** ni hace trámites: no es una gestoría.
-- **Los documentos legales son borradores de trabajo.** Están redactados para legislación
-  española y sirven de base sólida, pero no sustituyen la revisión de un abogado. Para un
-  sector regulado, el propio módulo lo advierte y no improvisa regulación.
-- **No te consigue clientes.** Diseña el sistema de captación; ejecutarlo son tus semanas.
-- **No valida tu idea por ti.** Investiga el mercado y te dice lo que encuentra. Si lo que
-  encuentra es malo, te lo dirá — pero validar es hablar con clientes, no leer un informe.
-- **No inventa datos.** Si falta un número, se estima juntos o se marca `[PENDIENTE]`.
+No monta tu web, no tramita tu alta ni sustituye a una gestoría o a un abogado: los documentos son borradores de trabajo.
 
 ---
 
 ## Instalación
 
-### Claude.ai (recomendado)
+### claude.ai y Claude Cowork
 
-Ajustes → Capacidades → Skills → crear skill nueva. Pega `SKILL.md` como contenido
-principal y sube el resto de ficheros conservando la estructura de carpetas.
+1. En **Ajustes → Capacidades**, activa **Ejecución de código y creación de archivos**. Las skills están disponibles en todos los planes, también en el gratuito; en Team y Enterprise las activa la persona administradora.
+2. Descarga **`business-launcher.zip`** de la [última Release](https://github.com/Luispitik/business-launcher/releases/latest). No uses el botón "Code → Download ZIP" de GitHub: crea una carpeta `business-launcher-master` y la subida falla porque el nombre de la carpeta no coincide con el de la skill.
+3. En **Personalizar → Skills**, pulsa **+ → Crear skill → Subir una skill** y elige el ZIP.
+
+Cowork usa las skills activadas en tu cuenta de claude.ai: no hace falta instalarla aparte. Abre una carpeta de trabajo y tu ficha de progreso se guardará ahí.
 
 ### Claude Code
+
+Como plugin, con actualizaciones:
+
+```
+/plugin marketplace add Luispitik/business-launcher
+/plugin install business-launcher@salgadoia-skills
+```
+
+O clonando el repositorio en tus skills personales:
 
 ```bash
 git clone https://github.com/Luispitik/business-launcher.git ~/.claude/skills/business-launcher
 ```
 
-### Skills complementarias
+Instala una sola copia por entorno. Para los entregables en Word, instala también la skill `docx` (`/plugin install document-skills@anthropic-agent-skills`); sin ella recibirás Markdown o HTML.
 
-| Skill | Para qué | Sin ella |
+---
+
+## Cómo funciona
+
+La entrevista inicial detecta tu ruta y adapta el recorrido. Según la ruta, pasa por estas fases:
+
+| # | Fase | Qué produce |
 |---|---|---|
-| `docx` | Todos los entregables en Word | Recibes el contenido en chat, no en fichero |
-| `pptx` | Presentaciones | Se omiten |
-| `canvas-design` | Logo e identidad visual | El módulo de marca entrega criterio, no artes finales |
+| 0 | Entrevista | Ruta, perfil calibrado y brief de negocio |
+| 1 | Investigación de mercado | Competidores, precios reales con su fuente, huecos y canales |
+| 2 | Modelo de negocio y oferta | Cliente ideal, propuesta de valor, servicios y precios calibrados |
+| 3 | Marca | Nombre, tono, identidad visual (completa o mínima) |
+| 4 | Documentación de arranque | Checklist de obligaciones legales y fiscales y documentos comerciales |
+| 5 | Plan de 90 días | Semanas con tareas, herramientas verificadas y métricas |
+| 6 | Prompt para tu web | Instrucción para que un agente o tu constructor web la monte |
+| 7 | Captación y ventas | Diagnóstico y sistema para conseguir clientes (completo o básico) |
 
-**Sobre la persistencia entre sesiones:** el estado se guarda de forma invisible mediante
-artifacts HTML con almacenamiento de navegador, así que funciona en claude.ai. En otros
-entornos puede no estar disponible; en ese caso la skill lo detecta, avisa y continúa —
-simplemente el progreso vale solo para esa sesión.
+En cada fase recibes un entregable y nada avanza sin que lo confirmes. Las rutas cambian el orden y el alcance: en Activador la captación va antes que la oferta; en Explorador se valida con conversaciones antes de invertir en marca y contratos.
 
----
+**Lo que la diferencia:**
 
-## Uso
+- **Precios calibrados a tu perfil real.** A quien arranca no se le ponen precios de veterano, y cada precio se ancla en comparables del mercado, no en lo que "suena bien". Los modelos de lenguaje tienden a inflar precios y plazos; la skill lo compensa con datos.
+- **Datos verificados.** Precios de herramientas y competidores se comprueban con la búsqueda web y llevan fuente y fecha. Si no hay búsqueda web, se marcan `[VERIFICAR]` en lugar de inventarse.
+- **Lo legal, investigado cada vez.** La skill no trae respuestas legales escritas: en cada uso investiga cada punto (altas, impuestos, facturación, protección de datos, publicidad…) en la fuente oficial, lo contrasta con una segunda fuente y te da ambas con fecha. Lo que no se puede verificar queda marcado para tu gestoría o tu abogado.
+- **Factores humanos.** Urgencia económica, bloqueos y experiencias previas cambian el plan: con un mes de colchón, el plan es de 30 días y busca ingresos ya. Es pragmático, no terapia.
+- **Debate, no validación.** Propone, cuestiona su propia propuesta y te señala lo que no encaja con lo que has contado.
 
-```
-business launcher
-```
+### Tu ficha de progreso
 
-También arranca con "quiero sistematizar un servicio", "necesito clientes", "quiero
-escalar mi negocio" o "ayúdame a lanzar mi empresa".
+El proceso se hace en varias sesiones. Tu progreso vive en un archivo, `ficha-business-launcher.md`, que es tuyo:
 
-El intake dura unos 15 minutos y hace las preguntas de una en una. A partir de ahí, cada
-fase termina en un checkpoint: nada avanza sin que lo confirmes.
+- En **Claude Code y Cowork** se guarda solo en tu carpeta de trabajo.
+- En **claude.ai**, la skill te entrega la ficha actualizada al cerrar cada fase. Trabaja dentro de un Proyecto (por ejemplo, "Mi negocio") y súbela allí; la próxima vez retomará donde lo dejaste.
 
----
-
-## Cómo se comporta
-
-No es un generador de documentos con pasos intermedios. La regla de diseño es que **el
-valor está en las preguntas que provoca, no en los ficheros que produce**, y eso se traduce
-en comportamientos concretos:
-
-- Propone, y después cuestiona su propia propuesta
-- Si detecta que algo contradice lo que dijiste antes, lo corrige **antes** de enseñártelo,
-  en vez de esperar a que lo detectes tú
-- Antes de cerrar el catálogo, propone servicios complementarios que no habías mencionado
-- Te pregunta si el precio óptimo te incomoda decirlo en voz alta, y si la respuesta es sí,
-  trabaja la justificación con datos de mercado
-
-Si aceptas todo lo que propone sin discutir nada, algo va mal. El manual lo dice
-literalmente.
+La ficha no guarda tu relato personal ni datos de terceros; solo lo necesario para continuar.
 
 ---
 
-## Entregables
+## Qué no hace
 
-| Entregable | Formato | Fase |
-|---|---|---|
-| Brief de negocio | DOCX | 0 |
-| Investigación de mercado | HTML | 1 |
-| Modelo de negocio y oferta | DOCX | 2 |
-| Manual de marca + logo | DOCX + PNG/SVG | 3 |
-| Propuesta comercial tipo | DOCX | 4 |
-| NDA | DOCX | 4 |
-| DPA (RGPD) | DOCX | 4 |
-| Contrato de prestación de servicios | DOCX | 4 |
-| Plan de 90 días | DOCX | 5 |
-| Prompt web + mockups | MD + HTML | 6 |
-| Estrategia de captación | DOCX | 7 |
-
-Cuáles recibes depende de tu ruta: un Escalador con marca y contratos ya hechos no genera
-las fases 3 y 4, las revisa.
+- **No implementa nada técnico.** La fase 6 genera el prompt para construir tu web; ejecutarlo es otro trabajo.
+- **No hace trámites** ni sustituye a una gestoría o a un abogado. Los documentos son borradores de trabajo para revisar con un profesional, y en sectores regulados la skill lo advierte y no improvisa normativa.
+- **No te consigue clientes.** Diseña el sistema; ejecutarlo son tus semanas.
+- **No valida tu idea por ti.** Investiga y te dice lo que encuentra; validar es hablar con clientes.
 
 ---
 
-## Arquitectura
+## Estructura
 
 ```
-SKILL.md                        Orquestador
-config/
-  route-profiles.md             Las 5 rutas con sus secuencias y ajustes
-  state-schema.md               Persistencia invisible entre sesiones
-layers/
-  factores-humanos.md           Capa transversal (miedos, urgencia, bloqueos)
-modules/
-  00-intake.md                  Intake adaptativo con árbol de decisión
-  01-investigacion.md           Investigación de mercado
-  02-negocio-oferta.md          Modelo, oferta y pricing calibrado
-  03-marca.md                   Identidad de marca
-  04-legal.md                   Pack documental
-  05-plan-90-dias.md            Plan accionable
-  06-web-prompt.md              Prompt web con dirección visual
-  07-captacion.md               Estrategia de captación y ventas
+SKILL.md                     Orquestador
+config/route-profiles.md     Rutas: secuencia de fases y ajustes
+config/state-schema.md       Ficha de progreso
+layers/factores-humanos.md   Ajustes por urgencia, bloqueos y experiencias previas
+modules/00-intake.md … 07-captacion.md   Una fase por archivo, que se lee cuando toca
+evals/                       Casos de prueba de comportamiento
+.claude-plugin/              Manifiesto de plugin y marketplace para Claude Code
 ```
 
-Cada módulo se lee cuando toca, no todos de golpe. Es lo que permite que un proceso de ocho
-fases quepa en una conversación sin quedarse sin contexto a la mitad.
+Cambios entre versiones: [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
 ## Licencia
 
-**MIT** — uso, modificación y redistribución libres, incluso comerciales. La única
-condición es conservar el aviso de copyright.
-
-Copyright (c) 2026 Luis Salgado. Ver [LICENSE](./LICENSE).
+**MIT**: uso, modificación y redistribución libres, también comerciales, conservando el aviso de copyright. Ver [LICENSE](LICENSE).
 
 ---
 
-Creado por **Luis Salgado** — [salgadoia.com](https://salgadoia.com)
+Creado por **Luis Salgado** · [SalgadoIA](https://salgadoia.com) · Sigue tu curiosidad.

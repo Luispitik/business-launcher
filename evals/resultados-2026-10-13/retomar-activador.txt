@@ -1,0 +1,15 @@
+La última vez cerramos la entrevista y la investigación de canales de tu fisioterapia a domicilio en Vigo. Vimos que tus clientes buscan a alguien cerca de casa. Por eso decidimos dar prioridad a lo local frente a Instagram: la ficha de Google con reseñas, las derivaciones de médicos de cabecera y los clubes deportivos. Ahora toca la estrategia de captación, que en tu caso es la pieza central.
+
+Seguimos por ahí. Antes de diseñar nada necesito saber qué has probado y qué pasó. Así veremos si falla el canal (la vía por la que te llegan los clientes), el mensaje o el tipo de cliente al que te diriges. Basta con cifras aproximadas:
+
+1. **Clientes que hayas tenido:** ¿cómo te llegaron? Por ejemplo, boca a boca, Google, Instagram o algún médico o centro.
+2. **Estos tres meses:** qué has hecho para conseguir clientes.
+   - Instagram: cada cuánto publicas y si te escribe alguien.
+   - La web: si te llega alguna consulta por ella.
+   - La ficha de Google: si la tienes y cuántas reseñas tiene.
+   - Si ya has hablado con algún médico, club o gimnasio.
+3. **Resultado:** cuántas consultas salieron, cuántas acabaron en presupuesto y por qué te dijeron que no la mayoría de las veces (precio, distancia, "ya tengo fisio"...).
+4. **Lo que ofreces hoy:** precio de la sesión suelta, si tienes bonos y qué zona cubres.
+5. **Recursos:** cuántas horas a la semana puedes dedicar a buscar clientes y si tienes algo de presupuesto o vamos con 0 €.
+
+Otra cosa: en la carpeta solo tengo la ficha. No están el brief ni la investigación de la última vez. Si los tienes a mano, súbelos a `business-launcher/` y así te pregunto menos. Si no, trabajo con lo que me cuentes.

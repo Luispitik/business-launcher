@@ -1,211 +1,81 @@
-# Módulo 07 — Estrategia de captación y ventas
+# M7 — Captación y ventas
 
 ## Objetivo
 
-Diseñar un sistema completo de captación de clientes para alguien que tiene
-el negocio montado pero no le entran clientes. El resultado es un plan de
-adquisición accionable con canales priorizados, mensajes, secuencias y métricas.
+Un sistema para conseguir clientes: diagnóstico de lo que ha fallado, canal principal, mensajes, seguimiento y métricas. Tiene dos versiones según la ruta (`config/route-profiles.md`):
 
-## Cuándo se activa
+- **Completa**: módulo central en Activador; opcional en Escalador y Redefinidor si aparece un problema de captación.
+- **Básica**: en Definidor y Explorador, dentro del primer sprint de M5. Solo el canal 0 (red de contactos) y el guion de conversación de descubrimiento, porque todavía no hay oferta probada que escalar.
 
-- **Obligatorio** en ruta Activador (es el módulo central).
-- **Opcional** en rutas Redefinidor y Escalador si el diagnóstico detecta
-  problemas de captación.
-- **No aplica** en Explorador ni Definidor (aún no tienen oferta consolidada).
+## Punto de partida
 
-## Pre-requisitos
+Usa la investigación de canales de M1 y lo que la persona contó en el intake (oferta actual, intentos previos, red de contactos). En Activador, M7 va antes que M2 y M4: toma el cliente ideal de cómo describe a sus clientes y fija uno provisional que M2 revisará después; la propuesta rápida se redacta aquí desde la oferta actual.
 
-- M1 completado (investigación de mercado con foco en canales).
-- Datos del intake: ICP, oferta actual, intentos previos de captación, red de contactos.
+## Diagnóstico (versión completa)
 
-## Ejecución
+Antes de diseñar nada, entiende qué ha probado y qué pasó: contenido publicado (dónde, frecuencia, resultado), contacto directo (a quién, por qué canal, con qué mensaje), eventos, recomendaciones, web y buscadores; cuántas conversaciones, propuestas y clientes salieron y el motivo más frecuente del "no". Si la mayor parte ya la contó en el intake, confírmala en bloque y pregunta solo lo que falte.
 
-### 7.1 Diagnóstico de captación actual
+Si no ha probado nada, el problema es de arranque: prioriza acción inmediata sobre estrategia. Si ha probado y no funciona, diagnostica qué falla de los tres: canal, mensaje o a quién se dirige.
 
-Antes de diseñar nada, entender qué ha intentado y qué ha pasado:
+## Canal principal
 
-```
-AUDITORÍA DE CAPTACIÓN
+La red de contactos existente (canal 0) va siempre primero, porque es inmediata y gratuita. Además de ella, un solo canal principal: con varios a la vez y sin datos no se sabe cuál funciona. El segundo canal se valora en la última fase de M5. Elige el principal por dónde está su cliente (M1), qué funciona en su sector, sus recursos y lo que ya probó sin éxito.
 
-¿Qué has hecho hasta ahora para conseguir clientes?
-- Publicar contenido: [dónde, con qué frecuencia, qué resultados]
-- Outreach directo: [a quién, por qué canal, qué mensaje, qué respuesta]
-- Networking/eventos: [cuáles, qué contactos generaron]
-- Referidos: [ha pedido activamente? alguien le ha derivado clientes?]
-- Web/SEO: [tiene web? genera tráfico? tiene formulario/CTA?]
-- Nada: [no ha hecho nada — por qué? miedo, no saber cómo, falta de tiempo?]
+| Canal | Velocidad | Coste | Mejor para |
+|---|---|---|---|
+| Red de contactos | Inmediata | 0 € | Primeros clientes de cualquier negocio |
+| Ficha de empresa en mapas y reseñas | 2-6 semanas | 0 € | Servicios locales y a particulares |
+| Directorios y plataformas del sector | 2-6 semanas | Variable | Profesiones con directorios de referencia (salud, reformas, formación…) |
+| Derivaciones de profesionales complementarios | 1-2 meses | 0 € | Servicios que otro profesional recomienda (médicos, gestorías, gimnasios, asociaciones) |
+| LinkedIn y contenido | 2-4 semanas | 0 € | Servicios profesionales a empresas |
+| Contenido de autoridad | 2-3 meses | 0 € | Posicionamiento a medio plazo |
+| Comunidades y eventos | 1-4 semanas | Variable | Nichos y servicios regionales |
+| Correo a antiguos clientes | Inmediata | 0 € | Solo clientes actuales o antiguos, sobre servicios similares a los que contrataron, con opción de baja en cada envío |
+| Publicidad de pago | Inmediata | Variable | Solo con presupuesto y una página que ya convierte |
 
-¿Cuál fue el resultado?
-- Conversaciones generadas: [número]
-- Propuestas enviadas: [número]
-- Clientes cerrados: [número]
-- Razón más frecuente de "no": [no responden / demasiado caro / no es el momento / otro]
-```
+Las velocidades son orientativas; los costes concretos, con búsqueda web y fecha.
 
-**Si no ha intentado nada**: El problema es de arranque, no de sistema.
-Priorizar acción inmediata sobre estrategia sofisticada.
+**Reglas de cumplimiento**, antes de proponer cualquier canal. Investiga y contrasta en ese momento la norma vigente sobre comunicaciones comerciales electrónicas y protección de datos para el canal que vayas a proponer (en España, la LSSI y el RGPD son el punto de partida de la búsqueda; comprueba también si aplican a destinatarios que son empresas), y cita las fuentes con fecha. Mientras no esté verificado, aplica este criterio prudente:
+1. Nada de correo, SMS ni WhatsApp comercial a quien no lo haya pedido, salvo clientes con contrato previo y para servicios similares.
+2. Nada de comprar bases de datos ni de extraer datos de perfiles o webs.
+3. El primer contacto con un desconocido es individual y por una vía en la que esa persona se ha hecho contactable: su formulario, un evento, la presentación de alguien en común o una conexión aceptada.
+4. Si se guardan sus datos, en el primer contacto se dice quién eres, para qué los usas y cómo oponerse.
+5. En LinkedIn, invitaciones y mensajes individuales escritos por la persona, en un volumen que pueda personalizar a mano, sin automatizadores ni extractores de perfiles (comprueba las condiciones de uso vigentes de la plataforma).
 
-**Si ha intentado y no funciona**: El problema es de canal, mensaje o targeting.
-Diagnosticar cuál de los tres falla.
+## Sistema
 
-### 7.2 Selección de canal principal
+**Canal 0 — red de contactos.** Lista de personas que ya saben a qué se dedica, de quienes podrían recomendarle y de quienes son directamente su cliente ideal. Mensaje personal, no un anuncio, que pida opinión o una recomendación en lugar de una venta (lo que sigue es ilustrativo; adáptalo a su voz y sector):
 
-De la investigación del M1, identificar los **2 canales con mayor probabilidad
-de impacto en los primeros 30 días**. Criterios:
+> [Nombre], te escribo porque [contexto honesto: he montado X / empiezo a ofrecer Y]. No te estoy vendiendo nada: ¿conoces a alguien que tenga [problema que resuelves]? Y si tienes quince minutos para darme tu opinión sobre lo que ofrezco, me ayudaría mucho.
 
-| Canal | Velocidad | Coste | Esfuerzo | Mejor para |
-|-------|-----------|-------|----------|------------|
-| Red de contactos existente | Inmediata | €0 | Bajo | Primeros 1-3 clientes |
-| LinkedIn outreach | 2-4 semanas | €0 | Medio | B2B servicios profesionales |
-| Contenido de autoridad | 2-3 meses | €0 | Alto | Posicionamiento a medio plazo |
-| Comunidades (Slack, Discord, foros) | 2-4 semanas | €0 | Medio | Nichos técnicos |
-| Eventos/networking presencial | 1-4 semanas | €0-200 | Medio | Servicios locales/regionales |
-| Cold email | 2-4 semanas | €50-200/mes | Medio | B2B con ICP definido |
-| Partnerships/referidos | 1-2 meses | €0 | Medio | Servicios complementarios |
-| Publicidad pagada | Inmediata | €500+ | Bajo | Solo si hay presupuesto y landing validada |
+Secuencia: mensaje escrito a mano para cada persona (nunca masivo ni cargado en una herramienta de envíos), un solo recordatorio breve a los tres o cuatro días si no responde, conversación de quince minutos si responde, y después propuesta o petición de recomendación.
 
-**Regla**: Siempre empezar por la red de contactos existente (canal 0).
-Después, elegir UN canal principal. No dos, no tres. Uno.
+Las métricas que pongas (tasa de respuesta, conversaciones, propuestas) son hipótesis de partida: dilo así y recalíbralas con los datos de sus dos primeras semanas.
 
-Justificar la elección basándose en:
-- Dónde pasa tiempo el ICP (del M1).
-- Qué ha funcionado en el sector (del M1).
-- Recursos disponibles del usuario (tiempo, presupuesto, habilidades).
-- Qué ha intentado antes y por qué no funcionó (7.1).
+**Canal principal.** A quién se dirige en ese canal, mensaje o contenido inicial adaptado al canal, secuencia de contacto (primer paso, seguimiento, cierre o descarte, con plazos), cómo pasar a una conversación, herramientas con alternativa gratuita, horas semanales realistas y métricas semanales (contactos nuevos, conversaciones, propuestas, conversión).
 
-### 7.3 Sistema de captación
+## Guion de conversación de descubrimiento
 
-Para cada canal seleccionado, definir:
+No es un discurso de venta: es una conversación de 15-20 minutos para entender el problema.
 
-#### Canal 0 — Red de contactos (SIEMPRE)
+1. Contexto (2 min): qué hace o qué le pasa, en sus palabras.
+2. Problema (5 min): cuál es el mayor quebradero de cabeza en lo que la persona resuelve.
+3. Impacto (3 min): qué le cuesta en tiempo, dinero o energía.
+4. Intentos previos (3 min): qué ha probado y qué pasó.
+5. Cierre (2 min): si encaja, proponer enviar una propuesta concreta esa semana.
 
-```
-ACTIVACIÓN DE RED EXISTENTE
+Adapta el vocabulario a su cliente: con un particular, sin jerga de empresa.
 
-1. Lista de contactos relevantes:
-   - Personas que ya saben qué haces: [mínimo 10]
-   - Personas que podrían derivarte clientes: [mínimo 5]
-   - Personas que son tu ICP directo: [las que haya]
+## Seguimiento
 
-2. Mensaje de activación (NO es un pitch de ventas):
-   "[Nombre], te escribo porque [contexto honesto: he montado X / estoy
-   ofreciendo Y / estoy buscando mis primeros clientes en Z].
-   No te estoy vendiendo nada — me interesa saber si conoces a alguien
-   que tenga [problema que resuelves]. ¿Te suena alguien?
-   Y si tú tienes 15 minutos para darme feedback sobre mi oferta,
-   me sería muy valioso."
+Un registro sencillo con la herramienta que ya use (una hoja de cálculo basta) y estas etapas: contacto, conversación, propuesta, negociación, ganado y perdido con su motivo. Revisarlo una vez por semana, no dejar pasar más de cinco días sin seguimiento entre conversación y negociación, y preguntar abiertamente si sigue interesado cuando pasen dos semanas en negociación.
 
-3. Secuencia:
-   - Día 1: Enviar mensaje personalizado (nunca masivo, nunca copy-paste)
-   - Día 3-4: Si no responde, segundo toque breve
-   - Si responde: Agendar conversación de 15 min
-   - Post-conversación: Enviar propuesta o pedir referido
+## Entregable
 
-4. Métrica: Tasa de respuesta >40%, tasa de conversación agendada >20%
-```
+DOCX "Estrategia de captación — [nombre]": diagnóstico, canal principal y por qué, sistema del canal 0 y del canal principal, guion de descubrimiento, plantillas de seguimiento y de propuesta rápida (una página), registro con sus etapas y métricas semanales. La versión básica es una página con el canal 0 y el guion. Anota en la ficha el canal elegido y las métricas objetivo.
 
-#### Canal principal — Estructura genérica
+## Checkpoint
 
-```
-SISTEMA DE CAPTACIÓN — [Canal]
+> Este es tu sistema para conseguir clientes. ¿El canal principal te parece realista? ¿Hay algún mensaje que te incomode enviar?
 
-1. Perfil objetivo:
-   [Descripción precisa del ICP en este canal]
-
-2. Mensaje/contenido inicial:
-   [Plantilla adaptada al canal — NO genérica]
-
-3. Secuencia de contacto:
-   Paso 1: [acción + timing]
-   Paso 2: [follow-up + timing]
-   Paso 3: [cierre o descarte + timing]
-
-4. Conversión a conversación:
-   [Cómo pasar del canal a una llamada/reunión]
-
-5. Herramientas:
-   [Herramienta concreta para cada paso — con alternativa gratuita]
-
-6. Tiempo semanal requerido:
-   [Horas/semana realistas]
-
-7. Métricas semanales:
-   - Contactos nuevos: [objetivo]
-   - Conversaciones agendadas: [objetivo]
-   - Propuestas enviadas: [objetivo]
-   - Ratio de conversión objetivo: [%]
-```
-
-### 7.4 Mensajes y scripts de conversación
-
-Generar:
-
-**Script de conversación de descubrimiento (15-20 min)**:
-No es un pitch. Es una conversación para entender el problema del potencial cliente.
-
-```
-Estructura:
-1. Contexto (2 min): "Cuéntame qué haces y cómo está la cosa en [su sector]"
-2. Problema (5 min): "¿Cuál es el mayor dolor de cabeza en [área que resuelves]?"
-3. Impacto (3 min): "¿Qué te cuesta eso en tiempo/dinero/energía?"
-4. Intentos previos (3 min): "¿Has intentado resolverlo antes? ¿Qué pasó?"
-5. Cierre suave (2 min): "Creo que puedo ayudarte con eso. ¿Te parece si
-   te preparo una propuesta concreta esta semana?"
-```
-
-**Plantilla de seguimiento post-conversación**:
-Email/mensaje que recapitula lo hablado y propone siguiente paso.
-
-**Plantilla de propuesta rápida**:
-Versión corta (1 página) de la propuesta del M4 para enviar en <24h.
-
-### 7.5 Pipeline mínimo
-
-Definir un sistema simple de seguimiento:
-
-```
-PIPELINE DE VENTAS — [Nombre]
-
-Herramienta: [CRM gratuito recomendado: HubSpot Free / Notion / Sheets]
-
-Etapas:
-1. CONTACTO — He identificado a esta persona como potencial cliente
-2. CONVERSACIÓN — Hemos hablado, hay interés
-3. PROPUESTA — He enviado propuesta formal
-4. NEGOCIACIÓN — Está evaluando, hay preguntas
-5. CERRADO-GANADO — Ha aceptado
-6. CERRADO-PERDIDO — Ha dicho no (registrar motivo)
-
-Reglas:
-- Revisar pipeline cada lunes (15 min)
-- Nunca más de 5 días sin follow-up en etapa 2-4
-- Si en etapa 4 más de 2 semanas → preguntar directamente si sigue interesado/a
-- Cada "no" se registra con motivo para aprender
-```
-
-## Entregable M7
-
-**DOCX** — "Estrategia de Captación — [Nombre]" con:
-- Diagnóstico de captación actual
-- Canal principal seleccionado y justificación
-- Sistema completo del Canal 0 (red de contactos)
-- Sistema completo del canal principal
-- Scripts de conversación y plantillas de mensajes
-- Pipeline con herramienta y etapas
-- Métricas semanales objetivo
-- Propuesta rápida (plantilla 1 página)
-
-Si tienes la skill `docx` instalada, lee su SKILL.md antes de generar.
-
-## Persistencia
-
-Actualizar estado con M7 completado. Registrar canal elegido y métricas objetivo
-en `decisions_log`.
-
-## Checkpoint M7
-
-> "Tienes tu sistema de captación definido. Antes de seguir: ¿el canal principal
-> te parece realista? ¿Hay algún mensaje que te genere incomodidad enviar?"
->
-> [Si hay incomodidad → activar factores humanos: reformular mensaje,
-> reducir ambición inicial, proponer versión más suave como primer paso]
+Si algo le incomoda, aplica el checkpoint de M7 de `layers/factores-humanos.md`: suaviza el primer paso o reduce la ambición inicial.

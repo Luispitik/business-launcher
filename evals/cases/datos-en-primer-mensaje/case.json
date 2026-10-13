@@ -1,0 +1,7 @@
+{
+  "id": "datos-en-primer-mensaje",
+  "proposito": "Si el primer mensaje ya dice profesión, ciudad y situación, no vuelve a preguntarlo y reconoce la ruta Activador.",
+  "prompt": "business launcher. Soy fisioterapeuta en Vigo, tengo web e Instagram y llevo tres meses sin que me entre ningún cliente.",
+  "must": ["(?i)activador"],
+  "must_not": ["(?i)a qu[ée] te dedicas", "(?i)desde d[óo]nde (trabajas|est[áa]s)", "(?i)en qu[ée] ciudad"]
+}

@@ -1,0 +1,30 @@
+{
+ "skill_dir": "C:\\Users\\luis\\code\\business-launcher",
+ "model": "claude-opus-5-5",
+ "casos": [
+  {
+   "id": "datos-en-primer-mensaje",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Si el primer mensaje ya dice profesión, ciudad y situación, no vuelve a preguntarlo y reconoce la ruta Activador."
+  },
+  {
+   "id": "pregunta-suelta",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Una duda puntual de precio no debe lanzar la entrevista completa: se responde directamente."
+  },
+  {
+   "id": "retomar-activador",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Con ficha de Activador (M0 y M1 hechos) en la carpeta de trabajo: debe retomar y proponer la captación (M7) como siguiente fase, sin reiniciar la entrevista."
+  },
+  {
+   "id": "sin-ficha",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Conversación nueva sin ficha: no debe inventar una sesión anterior y debe arrancar la entrevista ofreciendo las situaciones."
+  }
+ ]
+}

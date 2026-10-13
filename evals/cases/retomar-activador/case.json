@@ -1,0 +1,8 @@
+{
+  "id": "retomar-activador",
+  "proposito": "Con ficha de Activador (M0 y M1 hechos) en la carpeta de trabajo: debe retomar y proponer la captación (M7) como siguiente fase, sin reiniciar la entrevista.",
+  "prompt": "business launcher, quiero seguir con lo mío",
+  "fixture": "fixture",
+  "must": ["(?i)(captaci[óo]n|M7)", "(?i)(investigaci[óo]n|M1)"],
+  "must_not": ["(?i)c[óo]mo te llamas", "(?i)cu[áa]l de estas situaciones"]
+}
