@@ -9,7 +9,7 @@ Que la persona sepa qué tiene que comprobar para operar legalmente en España y
 Este módulo no contiene respuestas legales: contiene los puntos que hay que investigar. Las normas, las cuotas, los modelos, los plazos y las fechas de entrada en vigor cambian a menudo y se anuncian cambios antes de publicarse, así que nada de lo legal se escribe de memoria ni se toma de este archivo como cierto. Para cada punto que aplique a esta persona:
 
 1. Investígalo en ese momento en la fuente oficial primaria (BOE, Agencia Tributaria, Seguridad Social, SEPE, AEPD, DOUE o el colegio profesional que corresponda).
-2. Contrástalo con una segunda fuente independiente y reciente (otra fuente oficial, o una publicación de un despacho o de una asociación profesional).
+2. Contrástalo con una segunda fuente independiente y reciente (otra fuente oficial, o una publicación de un despacho o de una asociación profesional), y busca expresamente si en los últimos meses se ha anunciado un aplazamiento, una reforma o un cambio de calendario sobre ese punto, aunque aún no esté en el BOE.
 3. Escribe la conclusión con ambas fuentes y la fecha de consulta.
 4. Si las fuentes no coinciden, si hay un cambio anunciado que aún no está publicado o si no lo puedes verificar, dilo así y márcalo `[VERIFICAR con gestoría/abogado]`. Sin búsqueda web, todo el módulo queda como `[VERIFICAR]`.
 

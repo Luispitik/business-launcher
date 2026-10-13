@@ -8,3 +8,7 @@ Incidencias, para que no se lean como un verde limpio:
 - `datos-en-primer-mensaje` falló en la primera ejecución: no nombraba la ruta. Se añadió a M0 que, si el primer mensaje ya deja clara la situación, nombre la ruta y pida confirmación; la repetición pasó. La respuesta afirma "consulta" cuando el usuario no lo dijo: detalle a vigilar.
 - `retomar-activador`: el comprobador exigía literalmente "investigación de mercado" y la respuesta correcta decía "investigación de canales". Se amplió a "investigación" tras ese falso negativo; el canario sigue rechazando la respuesta mala.
 - Línea base 3.0.0 en las mismas condiciones: `sin-ficha` falla (pregunta de una en una sin ofrecer las situaciones); `retomar-activador` pasa, porque el modelo lee la ficha 4.0 que encuentra en la carpeta aunque la 3.0 nunca la habría escrito.
+
+## Caso `legal-verificado` (añadido después)
+
+Supera el comprobador: investiga cada punto, cita dos fuentes con fecha y marca lo dudoso. Pero tiene un fallo de fondo que el comprobador no puede ver: da VERI*FACTU como obligatorio para autónomos el 1-7-2027 y no detecta el aplazamiento a 2028 anunciado por Hacienda el 5-10-2026 (sin publicar aún en el BOE). Por eso SKILL.md y M4 piden ahora buscar expresamente aplazamientos y cambios anunciados en los últimos meses, no solo la norma publicada. Las expresiones regulares comprueban la forma (fuentes, fecha, marcas), no que la conclusión legal esté al día: eso exige revisión humana o de un profesional.
