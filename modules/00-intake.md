@@ -1,139 +1,73 @@
-# Módulo 00 — Intake adaptativo
+# M0 — Intake
 
 ## Objetivo
 
-Recopilar información, detectar la ruta del usuario y explorar factores
-humanos. Máximo 15 minutos. Preguntas de una en una, conversacionalmente.
+Reunir lo necesario para asignar la ruta, calibrar el perfil y detectar los factores humanos que cambian el plan, y nada más. Es una conversación, no un formulario: pregunta poco cada vez, y si la persona ya ha dado un dato (en su primer mensaje o en una ficha), confírmalo en lugar de volver a preguntarlo. Salta lo que su ruta no necesita.
 
-## Mensaje de arranque
+## Arranque
 
-> **Hola. Voy a acompañarte en el proceso de construir (o reconstruir) tu negocio.**
+Preséntate en dos frases y pregunta a la vez por la persona y su situación, para que la ruta salga del primer intercambio. Por ejemplo:
+
+> Voy a acompañarte a construir (o reconstruir) tu negocio: primero entiendo dónde estás y después vamos fase a fase, con un entregable en cada una. Si no tienes un dato, lo estimamos juntos.
 >
-> Voy a hacerte unas preguntas para entender tu situación. No hay respuestas
-> correctas — solo información de partida. Si no tienes un dato, lo estimamos juntos.
->
-> ¿Empezamos?
+> Para empezar: ¿cómo te llamas, a qué te dedicas y desde dónde? ¿Y cuál de estas situaciones se parece más a la tuya?
+> - a) Ya facturo de forma regular y quiero crecer, productizar o subir precios
+> - b) Lo tengo todo montado, pero no me entran clientes
+> - c) Tengo negocio o clientes, pero quiero cambiar de dirección
+> - d) Tengo una idea clara, pero no he arrancado
+> - e) Sé hacer cosas, pero no sé qué negocio montar
 
-## Fase 1 — Detección de ruta (P1-P4)
+Correspondencia: a) Escalador, b) Activador, c) Redefinidor, d) Definidor, e) Explorador.
 
-### P1. Identificación
-"¿Cómo te llamas y desde dónde trabajas?"
+Si el primer mensaje ya deja clara la situación, no enseñes el menú: nombra la ruta que le corresponde ("lo que cuentas encaja con la ruta Activador: lo tienes montado, pero no llegan clientes"), pide que la confirme y sigue con lo que falte.
 
-### P2. Situación actual → DETERMINA LA RUTA
+Si la respuesta no encaja limpiamente, desambigua con una pregunta: "¿Tienes clientes que te paguen de forma regular?" (varios: Escalador; pocos y sin sistema: Activador; ninguno: Definidor, Redefinidor o Explorador) o "¿Tienes claro qué ofreces y a quién?" (sí, pero no llegan: Activador; sí, pero quiero cambiar: Redefinidor; no: Explorador).
 
-"¿Cuál de estas situaciones describe mejor dónde estás ahora?"
-- a) Tengo habilidades y experiencia pero no sé qué negocio montar → **EXPLORADOR**
-- b) Tengo una idea clara de negocio pero no he arrancado → **DEFINIDOR**
-- c) Ya tengo negocio/freelance pero quiero cambiar de dirección → **REDEFINIDOR**
-- d) Tengo el negocio montado pero no me entran clientes → **ACTIVADOR**
-- e) Ya facturo regularmente y quiero crecer o escalar → **ESCALADOR**
+## Qué necesitas saber
 
-**Desambiguación** (si la respuesta no encaja limpiamente):
-- "¿Ya tienes clientes que te paguen de forma regular?"
-  → Sí, varios = Escalador | Sí, pocos y sin sistema = Activador | No = Explorador/Definidor/Redefinidor
-- "¿Tienes claro qué servicio ofreces y a quién?"
-  → Sí pero no llegan clientes = Activador | Sí pero quiero cambiar = Redefinidor | No = Explorador
-- Si persiste la duda, preguntar directamente: "¿Te identificas más con [A] o con [B]?"
+**1. Contexto de la ruta** (una pregunta):
 
-### P3. Contexto según ruta
-
-| Ruta | P3 |
-|------|-----|
-| Explorador | "¿Qué sabes hacer bien? No pienses en negocio — piensa en qué te piden, qué se te da mejor que a la media, qué disfrutas." |
-| Definidor | "En una frase: ¿qué problema quieres resolver y para quién?" |
+| Ruta | Pregunta |
+|---|---|
+| Escalador | "¿Cuánto facturas al mes, cuántos clientes tienes y cuál es tu ticket medio? Valen cifras aproximadas." |
+| Activador | "¿Qué tienes montado (oferta, web, marca, contratos) y qué has probado para conseguir clientes? ¿Qué pasó?" |
 | Redefinidor | "¿Qué tienes ahora (clientes, facturación, marca, web) y qué quieres cambiar?" |
-| Activador | "Cuéntame qué tienes montado (oferta, web, marca, contratos) y qué has intentado para captar clientes. ¿Qué pasó?" |
-| Escalador | "¿Cuánto facturas al mes, cuántos clientes tienes y cuál es tu ticket medio?" |
+| Definidor | "En una frase: ¿qué problema quieres resolver y para quién?" |
+| Explorador | "¿Qué sabes hacer bien? No pienses en negocio: qué te piden, qué se te da mejor que a la media, qué disfrutas." |
 
-### P4. Diferencial
-"¿Qué experiencia, formación o conocimiento tienes que te diferencia?"
+**2. Diferencial**: qué experiencia, formación o conocimiento le distingue.
 
-## Fase 2 — Contexto operativo (P5-P9)
+**3. Contexto operativo**, en un solo mensaje con opciones cortas y la indicación de que responda lo que sepa:
+- A quién vende o venderá: empresas y profesionales, particulares o ambos; y si su actividad exige título, colegiación o autorización.
+- Red: clientes, contactos del sector o conversaciones abiertas.
+- Objetivo a 12 meses. Para Escalador, en crecimiento (%, clientes o facturación objetivo). Para el resto: complementar ingresos (menos de 2.000 €/mes), sustituir un sueldo (2.000-4.000 €), construir empresa (4.000-10.000 €) o crecer con equipo (más de 10.000 €).
+- Situación laboral actual (por cuenta ajena, autónomo, sociedad, sin actividad), horas por semana y presupuesto inicial aproximado; si trabaja solo o con equipo.
+- Marca y web: si ya tiene nombre, logo o web (no lo preguntes si ya lo ha contado).
+- Herramientas y suscripciones que ya usa (hosting, dominio, facturación, CRM, diseño, correo…), para no recomendarle duplicados.
 
-### P5. Red existente
-"¿Tienes ya clientes, contactos del sector o conversaciones abiertas?"
+**4. Factores humanos**: como mucho tres preguntas, todas opcionales, siguiendo `layers/factores-humanos.md`. Las más útiles: su mayor bloqueo ahora mismo, si ha intentado algo parecido antes y qué aprendió, y cuántos meses puede sostenerse sin que esto genere ingresos.
 
-### P6. Objetivo económico a 12 meses
-- a) Complementar ingresos (<€2.000/mes)
-- b) Sustituir empleo actual (€2.000–€4.000/mes)
-- c) Construir empresa (€4.000–€10.000/mes)
-- d) Escalar con equipo (>€10.000/mes)
+**5. Descartes**: sectores, clientes o servicios que ya ha descartado.
 
-### P7. Recursos disponibles
-"¿Con qué cuentas para arrancar?"
-- Tiempo disponible (horas/semana)
-- Presupuesto inicial aproximado
-- ¿Solo/a o con equipo?
+## Diagnóstico
 
-### P8. Estado de marca
-"¿Tienes ya nombre de negocio, logo o web?"
-
-### P9. Stack técnico y herramientas existentes
-"¿Tienes alguna herramienta, servicio o suscripción ya contratada?
-Piensa en todo: hosting, dominio, VPS, herramientas de diseño, CRM,
-facturación, email marketing, herramientas de comunicación visual
-(Miro, draw.io...), software de cualquier tipo."
-
-**Registrar todo** para no recomendar herramientas duplicadas ni asumir
-que parte de cero en stack técnico.
-
-## Fase 3 — Factores humanos (P10-P11)
-
-Leer `${CLAUDE_SKILL_DIR}/layers/factores-humanos.md` antes de ejecutar.
-
-### P10. Bloqueos y miedos
-"¿Cuál es tu mayor bloqueo ahora mismo para arrancar o avanzar?"
-
-Si la respuesta es superficial ("falta de tiempo", "no sé por dónde empezar"),
-profundizar con UNA:
-- "¿Qué es lo peor que podría pasar si arrancas esto y no funciona?"
-- "¿Hay alguna conversación que estés evitando tener?"
-
-### P11. Experiencia previa y urgencia
-"¿Has intentado algo parecido antes? Y en términos de urgencia:
-¿cuántos meses puedes mantenerte sin que esto genere ingresos?"
-
-## Fase 4 — Exclusiones (P12)
-
-### P12. Descartes
-"¿Hay alguna industria, tipo de cliente o servicio que hayas descartado ya?"
-
-## Procesamiento post-intake
-
-### 1. Persistir perfil
-Guardar en estado: `user_profile` + `human_factors` + `existing_subscriptions`.
-
-### 2. Diagnóstico
+Cuando tengas lo anterior, presenta un diagnóstico breve:
 
 ```
-📊 DIAGNÓSTICO INICIAL
-
-Perfil: [nombre] — [Explorador/Definidor/Redefinidor/Activador/Escalador]
-Base: [resumen 1 línea]
+DIAGNÓSTICO INICIAL
+Perfil: [nombre] · Ruta: [ruta] · Calibración: [nivel de la tabla de M2]
+Punto de partida: [una línea]
 Fortaleza principal: [la más clara]
 Riesgo principal: [el más evidente]
-Factor humano clave: [miedo/bloqueo/urgencia más relevante]
-Stack existente: [resumen de herramientas que ya tiene]
-
-Ruta asignada: [NOMBRE]
-Secuencia de módulos:
-  [secuencia adaptada a la ruta con ✅/⬜/⏭️]
-  [Nota si algún módulo se ajusta, salta o reordena]
+Lo que ajusta el plan: [urgencia, bloqueo o experiencia previa que cambia algo]
+Herramientas que ya tiene: [resumen]
+Secuencia: [módulos de la ruta según config/route-profiles.md, con lo que se salta y por qué]
 ```
 
-### 3. Brief de negocio (Entregable)
+## Entregable
 
-**DOCX** — "Brief de Negocio — [Nombre]" con:
-- Datos del perfil completo
-- Diagnóstico
-- Ruta asignada y justificación
-- Factores humanos identificados (pragmático, no clínico)
-- Stack existente del usuario
-- Secuencia de módulos con ajustes
+Brief de negocio (DOCX): perfil, diagnóstico, ruta y por qué, ajustes al plan por factores humanos (sin detalles personales), herramientas existentes y secuencia de módulos. Crea también la ficha de progreso (`config/state-schema.md`).
 
-Si tienes la skill `docx` instalada, lee su SKILL.md antes de generar.
+## Checkpoint
 
-### 4. Checkpoint
-
-> "Este es tu diagnóstico y tu ruta. ¿Te ves reflejado/a?
-> ¿Ajustamos algo antes de arrancar M1?"
+> Este es tu punto de partida y el camino que te propongo. ¿Te ves reflejado/a? ¿Ajustamos algo antes de empezar con la investigación de mercado?

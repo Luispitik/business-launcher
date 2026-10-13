@@ -1,183 +1,80 @@
-# Módulo 06 — Prompt multiagente para la web (OPCIONAL)
+# M6 — Prompt para construir la web (opcional)
 
 ## Objetivo
 
-Generar un prompt autocontenido que el usuario pueda pegar en Claude Code para
-construir su web profesional sin saber programar. Incluye una fase previa de
-**dirección visual** donde el usuario elige entre alternativas estéticas o
-sube referencias propias antes de que se genere una sola línea de código.
+Un prompt autocontenido para que un agente construya la web de la persona sin que tenga que programar, precedido de una dirección visual que la persona valida. Usa la oferta de M2 y la marca de M3 (o los datos mínimos del intake si M3 se saltó). Si no la necesita, se salta sin insistir.
 
-## Pre-requisitos
+## Elegir con qué se construye
 
-- Módulos M2 (oferta) y M3 (marca) completados.
-- Si M3 fue saltado, usar datos mínimos de marca del intake.
+Pregunta qué tiene: si ya usa un constructor sin código (Wix, Squarespace, WordPress, Framer…), el prompt se escribe para ese constructor o para mejorar su web actual. Si no tiene nada y quiere una web propia, el prompt es para Claude Code, y avisa de que necesitará cuentas en GitHub y en un servicio de alojamiento (por ejemplo, Vercel o Netlify), con el coste verificado.
 
-## FASE 0 — Dirección visual (ANTES de generar el prompt)
+## Dirección visual
 
-Esta fase es **interactiva y conversacional**. No se genera el prompt web
-hasta que el usuario haya validado una dirección visual concreta.
+La persona elige una de tres vías: le muestras tres propuestas, aporta de una a tres webs de referencia, o ambas.
 
-### Paso 1 — Recoger preferencias base
+**Propuestas.** Tres direcciones que difieran en estructura, densidad, tipografía y tono, no solo en color, derivadas de su sector, su cliente ideal y su marca: una asesoría de cumplimiento y un estudio de fisioterapia no deberían recibir las mismas tres. Evita los recursos que hacen que las webs generadas se parezcan entre sí (fondo crema o blanco roto, palabras en cursiva como acento en los titulares, etiquetas de sección numeradas "01/02/03", etiquetas en monoespaciada y botones en forma de píldora); si la marca pide alguno, úsalo a propósito y dilo. Para cada una: idea que transmite, paleta aplicada, sección principal, tipografía, espaciado y animación. Muéstralas como maqueta HTML (cabecera y sección de servicios) para que la persona las vea, no solo las lea.
 
-Preguntar al usuario:
+**Referencias.** Analiza cada web (lectura de la URL o captura): qué encaja con su negocio, qué no y el elemento clave que incorporar, y presenta una síntesis adaptada a su marca.
 
-> "Antes de generar el prompt para tu web, necesito entender qué estética
-> te representa. Tenemos tres caminos:"
->
-> **A)** Te muestro 3 propuestas visuales distintas y eliges la que más encaja.
-> **B)** Tú me pasas 1-3 webs de referencia que te gusten y construimos sobre eso.
-> **C)** Combinamos: te muestro opciones Y tú aportas referencias.
-
-### Paso 2A — Propuestas visuales generadas (si elige A o C)
-
-Generar **3 alternativas visuales radicalmente distintas** como HTML interactivo.
-Cada alternativa incluye:
-
-```
-ALTERNATIVA [N] — [Nombre descriptivo]
-
-Filosofía: [1 frase — qué transmite esta dirección]
-Estética: [minimalista / editorial / corporativa / bold / tech / artística]
-Paleta aplicada: [Cómo se adaptan los colores del M3 a esta estética]
-Layout hero: [Descripción de la sección principal]
-Tipografía: [Cómo se usa la jerarquía tipográfica del M3]
-Espaciado: [Aireado / compacto / asimétrico]
-Animaciones: [Ninguna / sutiles / expresivas]
-Referencia mental: [Web conocida con estética similar — solo como ancla]
-```
-
-**Las 3 deben ser radicalmente distintas**, no variaciones del mismo tema.
-Ejemplo para un consultor de IA:
-
-1. **Precision Dark** — Fondo oscuro, monospace en acentos, datos visibles, expertise técnico. Ref: stripe.com
-2. **Editorial Cálida** — Fondo crema, serif elegante, espacio en blanco, cercanía experta. Ref: julian.com
-3. **Corporate Bold** — Fondo blanco, bloques de color, CTAs grandes, confianza empresarial. Ref: mckinsey.com
-
-Generar cada alternativa como **mockup visual en HTML** (hero + sección servicios)
-para que el usuario vea la diferencia, no solo la lea.
-
-### Paso 2B — Referencias del usuario (si elige B o C)
-
-Si el usuario sube o comparte URLs de referencia:
-
-1. Analizar cada referencia (con web_fetch si es URL, o leer imagen si sube captura).
-2. Extraer: paleta, layout, tipografía, espaciado, tono, elementos diferenciadores.
-3. Presentar síntesis:
-
-```
-📋 ANÁLISIS DE TUS REFERENCIAS
-
-Referencia 1: [url]
-- Lo que funciona para tu negocio: [elementos aplicables]
-- Lo que no encaja con tu ICP/marca: [elementos descartables]
-- Elemento clave a incorporar: [el más relevante]
-
-SÍNTESIS — Tu dirección visual combina:
-- [Elemento X] de la referencia 1
-- [Elemento Y] de la referencia 2
-- Adaptado a tu paleta y tipografía del M3
-```
-
-### Paso 3 — Validación
-
-> "Esta es tu dirección visual: [resumen en 3 líneas].
-> ¿Es exactamente lo que quieres o ajustamos algo?"
-
-Iterar hasta confirmación. No avanzar sin "sí, adelante".
-
-### Persistir dirección visual
+No generes el prompt hasta que la persona confirme la dirección visual. Guárdala en la ficha como `visual_direction`:
 
 ```json
-{
-  "visual_direction": {
-    "method": "alternatives | references | combined",
-    "chosen_alternative": null,
-    "reference_urls": [],
-    "aesthetic": "",
-    "key_elements": [],
-    "confirmed_at": "ISO 8601"
-  }
-}
+{ "method": "propuestas | referencias | ambas", "chosen": "", "reference_urls": [], "aesthetic": "", "key_elements": [] }
 ```
 
-## Estructura del prompt generado
-
-Solo se genera tras confirmar dirección visual.
+## Estructura del prompt
 
 ```markdown
-# INSTRUCCIÓN PARA CLAUDE CODE — Web de [Nombre]
+# Web de [nombre]
 
-## CONTEXTO DEL PROYECTO
-[Datos del negocio, ICP, propuesta de valor — del M2]
+## Contexto
+[Negocio, cliente ideal y propuesta de valor de M2]
 
-## IDENTIDAD VISUAL
-[Paleta, tipografía, tono — del M3]
+## Identidad
+[Paleta, tipografía y tono de M3]
 
-## DIRECCIÓN VISUAL VALIDADA
-[Estética elegida, elementos clave, referencia mental]
-[Si hay URLs de referencia: elementos concretos a replicar y cuáles no]
+## Dirección visual validada
+[Estética elegida y elementos clave; qué tomar de cada referencia y qué no]
+[Recursos a evitar salvo que la dirección validada los pida: fondo crema o blanco roto, cursivas de acento en titulares, etiquetas numeradas "01/02/03", etiquetas en monoespaciada, botones en forma de píldora]
 
-Instrucción para Claude Code:
-"ANTES de construir ninguna página, genera 1 página de prueba
-(hero + sección de servicios + footer) con la dirección visual descrita.
-Muéstramela para validación. Solo tras mi OK, construye el resto."
+Antes de construir el resto, genera una página de prueba (cabecera, servicios y pie) con esta dirección y enséñamela. Sigue solo tras mi visto bueno.
 
-## STACK TÉCNICO
-Next.js (App Router) + TypeScript + Tailwind CSS
-Deploy: Vercel
-[Integraciones según el negocio]
+## Herramienta y alojamiento
+[Constructor elegido, o Claude Code con el stack que proponga para una web de servicios; dominio y alojamiento]
 
-## PÁGINAS A CONSTRUIR
-[Lista adaptada al modelo de negocio del M2]
-Para cada página:
-- Propósito y objetivo de conversión
-- Secciones con contenido real (nunca lorem ipsum)
-- CTA principal
-- Elementos visuales según dirección validada
+## Páginas
+[Según el modelo de M2. Para cada una: objetivo, secciones con contenido real (nunca texto de relleno) y llamada a la acción]
+No inventes testimonios, reseñas, logos de clientes, cifras de resultados, certificaciones ni premios: si no hay pruebas reales, quita la sección o márcala [PENDIENTE: prueba real].
 
-## INTEGRACIONES
-[Según necesidad:]
-- Formulario de contacto (Formspree / Resend / endpoint API nativo)
-- Chat widget (Anthropic API / Crisp / Tawk)
-- Calendario (Calendly / Cal.com embed)
-- Analytics (Plausible / GA4)
+## Integraciones
+[Formulario de contacto, reserva de citas, analítica; solo las que necesite]
 
-## BRANDING
-[Logo del M3 — integración en header, footer, favicon, OG image]
+## Legal
+[Aviso legal con los datos del titular que exige el art. 10 de la LSSI (incluido el colegio y el número si es profesión colegiada) y precios con impuestos.
+Privacidad con información básica en cada formulario y una casilla separada y sin marcar para comunicaciones comerciales.
+Banner de cookies con "Rechazar" en la primera capa, al mismo nivel que "Aceptar", y sin cargar cookies no técnicas (analítica, píxeles de anuncios) antes del consentimiento.
+Si vende a particulares por internet: condiciones de contratación, información previa, derecho de desistimiento y la función de desistimiento si ya es exigible (comprobar su estado en España).
+Si hay un asistente o chatbot de IA, que se identifique como IA.
+Todos los textos legales, marcados [PENDIENTE: revisión profesional].]
 
 ## SEO
-[Structured data: LocalBusiness, Service, Person — datos reales]
-[Meta tags por página + Open Graph]
+[Títulos y descripciones por página, datos estructurados del negocio, ficha local si atiende en un lugar]
 
-## LEGAL (RGPD)
-[Aviso legal, privacidad, cookies — datos reales del usuario]
-
-## BLOG
-[Si aplica: estrategia, categorías, primeros 3 títulos]
-
-## DEPLOY
-[Vercel CLI → repo → dominio → SSL]
-
-## CHECKLIST FINAL
-[ ] Responsive mobile/tablet/desktop
-[ ] Lighthouse >90 en todas las métricas
-[ ] Páginas legales completas
-[ ] Formulario funcional y testeado
-[ ] Favicon y OG images
-[ ] Analytics instalado
-[ ] SSL activo
-[ ] Sitemap.xml + robots.txt
+## Comprobación final
+[ ] Se ve bien en móvil, tableta y escritorio
+[ ] Páginas legales completas, con los datos del titular
+[ ] Banner de cookies con "Rechazar" en la primera capa y nada no técnico antes del consentimiento
+[ ] Formulario probado, con información de privacidad y casilla comercial sin marcar
+[ ] Toda prueba social es real y está documentada
+[ ] Favicon e imagen para compartir en redes
+[ ] Analítica instalada
+[ ] HTTPS activo
+[ ] Sitemap y robots.txt
 ```
 
-## Entregables M6
+## Entregables
 
-1. **MD** — "Prompt-Web-[Nombre]-ClaudeCode.md" (listo para copiar y pegar)
-2. **HTML** — "direccion-visual-[Nombre].html" (mockups de las alternativas presentadas)
+- MD "prompt-web-[nombre].md", listo para copiar.
+- HTML "direccion-visual-[nombre].html" con las maquetas presentadas.
 
-## Persistencia
-
-Registrar entregables. Marcar módulo como completado.
-
-## Nota
-
-Módulo opcional en todas las rutas. Si el usuario no lo necesita, saltar sin insistir.
+Registra ambos en la ficha.

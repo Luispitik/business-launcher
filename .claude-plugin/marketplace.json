@@ -1,0 +1,13 @@
+{
+  "name": "salgadoia-skills",
+  "description": "Skills públicas de SalgadoIA",
+  "owner": { "name": "Luis Salgado", "url": "https://salgadoia.com" },
+  "plugins": [
+    {
+      "name": "business-launcher",
+      "source": "./",
+      "description": "Te entrevista, detecta tu ruta y construye contigo el plan de tu negocio de servicios.",
+      "category": "business"
+    }
+  ]
+}

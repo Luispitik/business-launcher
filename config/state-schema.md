@@ -1,259 +1,120 @@
-# State Schema — Business Launcher v3
+# Ficha de progreso
 
-## Principio de diseño
+Business Launcher se trabaja en varias sesiones. El progreso vive en un único archivo, `ficha-business-launcher.md`, que pertenece a la persona: un resumen legible arriba y el estado en JSON abajo. Con él se retoma otro día o en otro entorno.
 
-La persistencia es **invisible para el usuario**. Nunca se le pide descargar,
-subir ni gestionar archivos de estado. Todo ocurre a través de artifacts HTML
-mínimos que leen/escriben en `window.storage` por detrás.
+## Dónde se lee y se guarda
 
-El usuario solo interactúa en chat. Los artifacts de estado son instrumentales
-(se generan, ejecutan su función y el foco vuelve al chat).
+| Entorno | Leer al empezar | Guardar tras cada checkpoint |
+|---|---|---|
+| Claude Code o Cowork (hay carpeta de trabajo) | `business-launcher/ficha-business-launcher.md` en la carpeta de trabajo | Edita ese archivo directamente; es la ficha de la persona y no hace falta pedir permiso para actualizarla. |
+| claude.ai dentro de un Proyecto | Archivos del Proyecto o adjunto en la conversación | Genera el archivo actualizado y di en una línea que sustituya la versión anterior en el Proyecto. |
+| claude.ai sin Proyecto | Adjunto en la conversación | Genera el archivo actualizado y, la primera vez, sugiere crear un Proyecto "Mi negocio" y subirla allí para no perderla. |
+| Sin creación de archivos | Bloque de reanudación pegado por la persona | Muestra el bloque de reanudación al cerrar cada módulo para que lo copie. |
 
-## Clave de almacenamiento
+Afirma que el progreso está guardado solo cuando el archivo se ha escrito. Si no se puede guardar, dilo en una línea: el progreso solo vale para esta conversación. La memoria de Claude o la búsqueda en chats anteriores pueden dar pistas, pero el estado sale de la ficha.
+
+Al retomar, resume la ficha en lenguaje natural ("La última vez cerramos la investigación de mercado y la oferta. ¿Seguimos con el plan de 90 días?"). No enseñes el JSON salvo que la persona lo pida.
+
+## Qué no se guarda
+
+La ficha puede acabar en un Proyecto, en una carpeta compartida o reenviada. Por eso no guarda relatos personales, salud, situación emocional ni datos de terceros (nombres de clientes o contactos). De los factores humanos se guarda solo el ajuste al plan ("primeras conversaciones con red cercana", "sprints de una semana") y el nivel de urgencia. Si la persona da cifras de facturación, se guardan como las dio y se le recuerda una vez que la ficha las contiene.
+
+## Formato de la ficha
+
+````markdown
+# Ficha Business Launcher — [nombre del negocio o de la persona]
+Versión de la ficha: 4.0.0 · Actualizada: AAAA-MM-DD
+
+## Dónde estamos
+[5 a 8 líneas: ruta, módulos hechos, siguiente paso y decisiones pendientes]
+
+## Decisiones clave
+- AAAA-MM-DD · M2 · Servicio tractor: [servicio] a [precio] €, porque…
+
+## Entregables
+- M1 · investigacion-mercado-[nombre].html (v1)
+
+## Estado (lo mantiene Claude; no hace falta editarlo)
+```json
+{ ...esquema de abajo... }
+```
+````
+
+## Bloque de reanudación
+
+Para entornos sin archivos, como máximo 12 líneas que la persona puede pegar en una conversación nueva:
 
 ```
-Clave: 'bl-state'
-Tipo: JSON stringificado
-Scope: personal (shared: false)
+BUSINESS LAUNCHER · ficha 4.0.0 · AAAA-MM-DD
+Persona/negocio: … · Ruta: … · Perfil: …
+Hecho: M0, M1 · Siguiente: M7
+Oferta: … · Precio tractor: … · ICP: …
+Ajustes del plan: … · Urgencia: …
+Pendiente: …
 ```
 
-## Operación 1 — Cargar estado (inicio de conversación)
-
-**Cuándo**: SIEMPRE al activarse el skill, antes de cualquier otra cosa.
-
-**Cómo**: Generar un artifact HTML que lea el estado y lo envíe al chat:
-
-```html
-<div id="status" style="font-family: var(--font-sans); padding: 1rem 0; color: var(--color-text-secondary); font-size: 14px;">
-  Cargando sesión anterior...
-</div>
-<script>
-(async () => {
-  const el = document.getElementById('status');
-  try {
-    const result = await window.storage.get('bl-state');
-    if (result && result.value) {
-      const state = JSON.parse(result.value);
-      const completed = state.progress.modules_completed || [];
-      const current = state.progress.current_module || '00';
-      const route = state.route.assigned || 'sin asignar';
-      const name = state.user_profile.name || 'usuario';
-      const pct = state.progress.completion_percentage || 0;
-      const deliverables = (state.deliverables || []).length;
-
-      // Mostrar resumen visual (solo los módulos de la ruta asignada)
-      const labels = {'00':'Intake','01':'M1','02':'M2','03':'M3','04':'M4','05':'M5','06':'M6','07':'M7'};
-      const skipped = state.route.skipped_modules || [];
-      const sequence = (state.route.module_sequence && state.route.module_sequence.length)
-        ? state.route.module_sequence
-        : ['00','01','02','03','04','05','06','07'];
-      const iconFor = (m) => {
-        if (completed.includes(m)) return '✅';
-        if (skipped.includes(m)) return '⏭️';
-        if (m === current) return '⏳';
-        return '⬜';
-      };
-      const progress = sequence.map(m => (labels[m] || m) + ' ' + iconFor(m)).join(' ');
-
-      el.innerHTML = '<div style="font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px">Sesión anterior encontrada</div>'
-        + '<div style="margin-bottom:4px"><b>Ruta:</b> ' + route.charAt(0).toUpperCase() + route.slice(1) + ' — ' + name + '</div>'
-        + '<div style="margin-bottom:4px"><b>Progreso:</b> ' + progress + '</div>'
-        + '<div style="margin-bottom:4px"><b>Entregables:</b> ' + deliverables + ' generados</div>'
-        + '<div style="margin-bottom:12px"><b>Completado:</b> ' + pct + '%</div>';
-
-      // Enviar estado completo al chat para que Claude lo tenga en contexto
-      sendPrompt('ESTADO RECUPERADO: ' + JSON.stringify(state));
-    } else {
-      el.textContent = 'Sin sesión anterior. Empezamos de cero.';
-      sendPrompt('ESTADO RECUPERADO: null');
-    }
-  } catch (e) {
-    el.textContent = 'Sin sesión anterior. Empezamos de cero.';
-    sendPrompt('ESTADO RECUPERADO: null');
-  }
-})();
-</script>
-```
-
-**Qué hace Claude al recibir el sendPrompt**:
-- Si recibe `null` → Inicia Fase 0 (Intake).
-- Si recibe estado → Muestra resumen conversacional y pregunta si retomar o reiniciar.
-
-**IMPORTANTE**: Claude NO muestra el JSON crudo al usuario. Interpreta el estado
-y habla en lenguaje natural: "La última vez completamos la investigación de mercado
-y el diseño de oferta. ¿Seguimos con la identidad de marca?"
-
-## Operación 2 — Guardar estado (tras cada checkpoint)
-
-**Cuándo**: Después de cada checkpoint confirmado por el usuario.
-
-**Cómo**: Generar un artifact HTML que escriba el estado actualizado:
-
-```html
-<div id="save" style="font-family: var(--font-sans); padding: 1rem 0; color: var(--color-text-secondary); font-size: 13px;">
-  Guardando progreso...
-</div>
-<script>
-(async () => {
-  const state = STATE_JSON_HERE; // Claude reemplaza con el estado completo
-  try {
-    await window.storage.set('bl-state', JSON.stringify(state));
-    document.getElementById('save').innerHTML = '<span style="color:var(--color-text-success)">✓ Progreso guardado</span>';
-  } catch (e) {
-    document.getElementById('save').innerHTML = '<span style="color:var(--color-text-warning)">⚠ No se pudo guardar. El progreso se mantiene en esta conversación.</span>';
-  }
-})();
-</script>
-```
-
-**Claude reemplaza `STATE_JSON_HERE`** con el objeto de estado completo serializado.
-El usuario ve brevemente "✓ Progreso guardado" y el flujo continúa.
-
-## Operación 3 — Reinicio
-
-Si el usuario pide reiniciar:
-
-```html
-<script>
-(async () => {
-  try {
-    // Backup del estado actual
-    const current = await window.storage.get('bl-state');
-    if (current && current.value) {
-      const ts = new Date().toISOString().slice(0,10);
-      await window.storage.set('bl-state-backup-' + ts, current.value);
-    }
-    // Borrar estado principal
-    await window.storage.delete('bl-state');
-    sendPrompt('ESTADO REINICIADO');
-  } catch (e) {
-    sendPrompt('ESTADO REINICIADO');
-  }
-})();
-</script>
-```
-
-## Esquema del objeto de estado
+## Esquema del estado
 
 ```json
 {
-  "version": "3.0.0",
-  "created_at": "ISO 8601",
-  "updated_at": "ISO 8601",
-
+  "version": "4.0.0",
+  "updated_at": "AAAA-MM-DD",
   "user_profile": {
     "name": "",
     "location": "",
-    "situation": "explorador | definidor | redefinidor | activador | escalador",
+    "employment": "cuenta ajena | autonomo | sociedad | sin actividad",
+    "customer_type": "empresas | particulares | mixto",
+    "regulated_activity": "",
     "problem_statement": "",
     "differential": "",
     "existing_clients": false,
-    "client_details": "",
     "economic_goal": "",
     "time_available_hours_week": 0,
     "budget_initial": 0,
     "has_team": false,
-    "team_details": "",
     "has_brand": false,
-    "brand_details": "",
-    "main_blocker": "",
     "excluded_sectors": [],
     "existing_assets": {
       "monthly_revenue": null,
       "num_clients": null,
       "avg_ticket": null,
-      "conversion_rate": null,
       "existing_contracts": false,
       "existing_website": "",
-      "existing_tools": [],
-      "existing_subscriptions": []
+      "existing_tools": []
     }
   },
-
-  "human_factors": {
-    "fears": [],
-    "past_failures": [],
-    "urgency_level": "low | medium | high | critical",
-    "urgency_details": "",
-    "emotional_state": "",
-    "support_network": "",
-    "risk_tolerance": "low | medium | high",
-    "decision_style": "analytical | intuitive | mixed",
-    "updated_at_modules": []
-  },
-
+  "calibration_level": "arranca_de_cero | freelance_sin_estructura | profesional_con_base | veterano",
+  "urgency_level": "baja | media | alta | critica",
+  "plan_adjustments": [],
   "route": {
-    "assigned": "explorador | definidor | redefinidor | activador | escalador",
+    "assigned": "escalador | activador | redefinidor | definidor | explorador",
     "reassigned_from": null,
-    "reassignment_reason": null,
-    "module_sequence": ["00", "01", "02", "03", "04", "05", "06", "07"],
-    "skipped_modules": [],
-    "optional_modules": ["06", "07"]
+    "sequence": ["M0", "M1", "M2", "M5"],
+    "optional_chosen": [],
+    "skipped": [{ "module": "M3", "motivo": "ya tiene marca" }]
   },
-
   "progress": {
-    "current_module": "00",
-    "current_step": "",
-    "modules_completed": [],
-    "modules_in_progress": [],
-    "last_checkpoint": "",
-    "last_checkpoint_at": "ISO 8601",
-    "completion_percentage": 0
+    "current": "M1",
+    "completed": ["M0"],
+    "next_step": ""
   },
-
-  "decisions_log": [
-    {
-      "id": 1,
-      "timestamp": "ISO 8601",
-      "module": "M2",
-      "decision": "Elegido modelo de retainer sobre proyectos puntuales",
-      "alternatives_considered": ["Proyecto puntual", "Retainer mensual", "Híbrido"],
-      "reasoning": "Mayor previsibilidad de ingresos",
-      "human_factors_influence": "Urgencia alta → priorizar recurrencia"
-    }
+  "plan_horizon_days": 90,
+  "visual_direction": null,
+  "decisions": [
+    { "date": "AAAA-MM-DD", "module": "M2", "decision": "", "alternatives": [], "motivo": "" }
   ],
-
   "deliverables": [
-    {
-      "id": 1,
-      "module": "M1",
-      "name": "investigacion-mercado-acme.html",
-      "format": "HTML",
-      "generated_at": "ISO 8601",
-      "version": 1,
-      "status": "final | draft | revised"
-    }
-  ],
-
-  "change_history": [
-    {
-      "timestamp": "ISO 8601",
-      "action": "module_completed | module_skipped | route_reassigned | deliverable_generated | deliverable_revised | profile_updated | human_factors_updated",
-      "module": "",
-      "details": "",
-      "previous_value": null,
-      "new_value": null
-    }
+    { "module": "M1", "name": "", "format": "HTML", "version": 1 }
   ]
 }
 ```
 
-## Reglas de escritura
+- Los módulos se identifican siempre como `M0` a `M7` (los archivos se llaman `00-intake.md` a `07-captacion.md`).
+- `visual_direction` lo rellena M6 con la estructura descrita en `modules/06-web-prompt.md`.
+- `plan_horizon_days` es 30 en urgencia crítica (ver `layers/factores-humanos.md`).
 
-1. **Nunca sobrescribir sin leer.** Siempre cargar estado actual → modificar → guardar.
-2. **Actualizar `updated_at`** en cada escritura.
-3. **`decisions_log` es append-only.** Nunca borrar decisiones anteriores.
-4. **`deliverables` permite versiones.** Si se regenera, incrementar `version`.
-5. **Si `change_history` supera 50 entradas**, comprimir las antiguas en resumen.
-6. **Límite de tamaño.** Si el estado se acerca a 100KB, comprimir `change_history`
-   y mantener solo las últimas 20 entradas detalladas.
+## Al escribir
 
-## Instrucciones para Claude
-
-- **Al inicio**: Genera el artifact lector. Espera el `sendPrompt` con el estado.
-- **Tras cada checkpoint**: Construye el objeto de estado actualizado y genera el artifact escritor.
-- **Nunca muestres JSON crudo al usuario.** Todo se traduce a lenguaje natural.
-- **Si el storage falla**: Continuar normalmente. El estado se mantiene en la conversación
-  activa. Avisar al usuario: "No se pudo guardar el progreso. Si cierras esta conversación,
-  tendremos que retomar manualmente."
-- **Nunca pedir al usuario que descargue, suba o gestione archivos de estado.**
+- Parte de la ficha que ya tienes en la conversación; añade decisiones y entregables, no los borres. Una entrega regenerada sube su `version`.
+- Si la ficha es de una versión anterior (3.x, guardada en el almacenamiento de un artifact o con módulos "03"), conviértela a este formato, quita los datos personales que ya no se guardan y dilo en una línea.
+- Si la ficha crece mucho, resume las decisiones antiguas en "Dónde estamos" y conserva las de los módulos en curso.

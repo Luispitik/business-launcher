@@ -1,184 +1,43 @@
-# Módulo 05 — Plan de 90 días accionable
+# M5 — Plan de 90 días
 
 ## Objetivo
 
-Plan de acción semanal con tareas concretas, decisiones, herramientas y métricas.
-Sin ambigüedades. Adaptado a la ruta y a los factores humanos del usuario.
+Un plan semanal sin ambigüedades: tareas, herramientas, tiempo y una métrica por semana, ajustado a la ruta y a los factores humanos. En urgencia crítica, el plan es de 30 días (`plan_horizon_days: 30`). Parte de todo lo que ya tienes en la conversación y aplica el checkpoint de M5 de `layers/factores-humanos.md` al cerrar.
 
-## Pre-requisitos
-
-- Cargar estado completo (perfil, factores humanos, módulos previos).
-- Leer `${CLAUDE_SKILL_DIR}/layers/factores-humanos.md` para checkpoint.
-
-## Estructura base por semana
+## Formato de cada semana
 
 ```
-SEMANA [N] — [Título]
-Objetivo: [resultado concreto al final de los 7 días]
-
-TAREAS (en orden de ejecución):
-[ ] Tarea 1
-    Qué hacer: [paso a paso]
-    Herramienta: [nombre concreto + link]
-    Tiempo estimado: [horas]
-    Resultado esperado: [qué tienes cuando completas]
-    Decisión necesaria: [si aplica]
-
-MÉTRICA DE ÉXITO:
-→ [indicador concreto y medible]
+SEMANA [N] — [título]
+Objetivo: [resultado concreto al final de la semana]
+Tareas, en orden:
+[ ] [tarea]: qué hacer, con qué herramienta (enlace y coste verificado), tiempo estimado, resultado esperado y decisión que exige si la hay
+Métrica: [indicador concreto y medible]
 ```
 
-## 3 sprints adaptados por ruta
+## Tres fases por ruta
 
-### EXPLORADOR
+**Escalador.** Días 1-30, mejoras rápidas: subida de precios para clientes nuevos (los actuales, en su siguiente renovación y con el aviso acordado en M2), productizar el servicio más vendido y medir el tiempo real por servicio. Días 31-60, sistematización: documentar captación, entrega y facturación, automatizar lo repetitivo y decidir qué se delega. Días 61-90, delegación: la primera tarea delegada con su control de calidad y un sistema de captación que no dependa de la persona. Antes de delegar en otro autónomo, la persona revisa con un laboralista el riesgo de falso autónomo (horario, medios, dependencia) y de que esa persona pase a depender económicamente de ella.
 
-**Sprint 1 (días 1-30) — Validación**
-- Semanas 1-2: 10 conversaciones de descubrimiento con potenciales clientes del nicho elegido en M1.
-- Semanas 3-4: Primer servicio piloto (precio reducido o gratis a cambio de caso de estudio). Formalización legal mínima.
+**Activador.** Días 1-30, activar la captación: semana 1, canal 0 de M7 (mensajes personalizados a 15-20 personas); semana 2, lanzar el canal principal; semana 3, cinco conversaciones de descubrimiento y ajustar el mensaje si la respuesta queda por debajo de la hipótesis de M7; semana 4, primera propuesta y seguimiento mínimo montado. Días 31-60, primeras conversiones: primer cliente o primer "no" con su motivo, duplicar el volumen del canal principal, revisar oferta o precio si las conversaciones lo piden y no dejar pasar más de cinco días sin seguimiento. Días 61-90, sistema: dos o tres clientes activos o en negociación avanzada, documentar qué mensajes y canales funcionan, pedir el primer testimonio y valorar un segundo canal.
 
-**Sprint 2 (días 31-60) — Primeros pasos**
-- Primeras propuestas formales basadas en aprendizaje del piloto.
-- Web mínima o landing page.
-- Primer contenido de autoridad.
+**Redefinidor.** Días 1-30, transición: mantener los ingresos actuales, comunicar el cambio a los clientes si procede, cinco conversaciones en el mercado nuevo y ajustar la oferta. Días 31-60, puente: primer cliente con el nuevo posicionamiento, reducir poco a poco lo anterior y actualizar la presencia digital. Días 61-90, consolidación: la mayor parte de los ingresos del modelo nuevo y decisión sobre qué mantener del anterior.
 
-**Sprint 3 (días 61-90) — Consolidación**
-- 2-3 clientes de pago.
-- Proceso definido y replicable.
-- Decisión: ¿este nicho funciona o pivoto?
+**Definidor.** Días 1-30, fundación: herramientas mínimas (correo, facturación con un programa que cumpla VERI*FACTU, seguimiento de clientes), diez conversaciones de validación con el guion de M7 básico, primera propuesta enviada y presencia mínima (perfil profesional o una página). El alta, según la checklist de M4, antes de empezar el primer encargo cobrado y no antes de validar: la cuota reducida empieza a contar desde el alta. Días 31-60, primeros clientes: afinar la propuesta, un canal principal, primer cliente o primer "no" documentado y bienvenida al cliente definida. Días 61-90, ajuste: revisar precios con lo aprendido, segundo cliente y un sistema de recomendaciones.
 
-### DEFINIDOR
+**Explorador.** Días 1-30, validación: diez conversaciones de descubrimiento en el nicho elegido con el guion de M7 básico y, si hay interés, un piloto reducido: gratuito o, si se cobra, con el alta hecha antes de empezar (checklist de M4). Sin gastos hasta que haya señal. Días 31-60, primeros pasos: propuestas basadas en el piloto, presencia mínima, primer contenido y, si el nicho se confirma, volver con la ficha para completar marca y documentos. Días 61-90, decisión: dos o tres clientes de pago y proceso repetible, o cambio de nicho con lo aprendido.
 
-**Sprint 1 (días 1-30) — Fundación**
-- Constitución legal / alta autónomo.
-- Herramientas mínimas (email, facturación, CRM básico).
-- 10 conversaciones de validación.
-- Primera propuesta enviada.
-- Web mínima.
+## Herramientas
 
-**Sprint 2 (días 31-60) — Primeros clientes**
-- Refinamiento de propuesta.
-- Canal principal de captación (×1).
-- Primer cliente o primer "no" documentado.
-- Onboarding de cliente definido.
+Antes de incluir una herramienta: mira primero las que ya usa (contexto operativo del intake) y, si una cubre la función, usa esa; busca el precio actual en la web y cítalo con fecha, porque los planes cambian y los gratuitos desaparecen; acompaña cada herramienta de pago con una alternativa gratuita o di que no la hay; y con presupuesto inicial por debajo de 1.000 €, prioriza las gratuitas.
 
-**Sprint 3 (días 61-90) — Optimización**
-- Revisión de precios basada en conversaciones reales.
-- Segundo cliente o ampliación.
-- Sistema de referidos.
-- Análisis de resultados vs objetivos.
+Compara las horas que suma el plan con las que la persona dijo tener: si no cuadra, recorta alcance, nunca supongas más disponibilidad.
 
-### REDEFINIDOR
+## Entregable
 
-**Sprint 1 (días 1-30) — Transición**
-- Mantener ingresos actuales mientras construye lo nuevo.
-- Comunicar transición a clientes actuales (si aplica).
-- 5 conversaciones en el nuevo mercado.
-- Ajustar oferta basada en feedback.
+DOCX "Plan de 90 días — [nombre]" (o de 30): resumen, las semanas detalladas, apéndice de herramientas con enlace, coste verificado y alternativa gratuita, y los ajustes hechos por factores humanos. Anota en la ficha los ajustes y la fecha de inicio.
 
-**Sprint 2 (días 31-60) — Puente**
-- Primer cliente en el nuevo posicionamiento.
-- Reducir gradualmente servicios del modelo anterior.
-- Actualizar presencia digital.
+## Checkpoint
 
-**Sprint 3 (días 61-90) — Consolidación**
-- Mayoría de ingresos del nuevo modelo.
-- Proceso documentado.
-- Decisión sobre servicios que mantener del modelo anterior.
+Aplica el checkpoint de M5 de `layers/factores-humanos.md`. Después:
 
-### ACTIVADOR
-
-**Sprint 1 (días 1-30) — Activación de pipeline**
-- Semana 1: Activar red de contactos (Canal 0 del M7). Enviar mensajes personalizados a 15-20 personas.
-- Semana 2: Lanzar canal principal elegido en M7. Primeras 5 acciones de outreach/contenido.
-- Semana 3: Primeras conversaciones de descubrimiento (objetivo: 5). Ajustar mensaje si tasa de respuesta <30%.
-- Semana 4: Primera propuesta enviada. Configurar pipeline de seguimiento (CRM mínimo).
-
-**Sprint 2 (días 31-60) — Primeras conversiones**
-- Primer cliente cerrado o primer "no" con motivo documentado y aprendizaje aplicado.
-- Duplicar volumen del canal principal.
-- Revisar oferta/pricing si las conversaciones revelan fricción.
-- Activar sistema de seguimiento (nunca más de 5 días sin follow-up).
-- Publicar primer contenido de autoridad si el canal lo permite.
-
-**Sprint 3 (días 61-90) — Sistema y segundo canal**
-- 2-3 clientes activos o en pipeline avanzado.
-- Documentar qué mensajes/canales funcionan y cuáles no (playbook propio).
-- Evaluar segundo canal de captación (no antes).
-- Pedir primer testimonio/caso de estudio a cliente satisfecho.
-- Análisis: ratio conversaciones → propuestas → clientes. Identificar cuello de botella.
-
-### ESCALADOR
-
-**Sprint 1 (días 1-30) — Quick wins**
-- Subida de precios comunicada a nuevos clientes (los existentes en siguiente renovación).
-- Productizar servicio más vendido.
-- Medir tiempo por servicio para detectar ineficiencias.
-
-**Sprint 2 (días 31-60) — Sistematización**
-- Documentar procesos clave (onboarding, delivery, facturación).
-- Evaluar primer hire o subcontratación.
-- Automatizar lo automatizable.
-
-**Sprint 3 (días 61-90) — Delegación**
-- Primera tarea delegada.
-- Sistema de calidad para trabajo delegado.
-- Pipeline de leads sistematizado.
-
-## CHECKPOINT DE FACTORES HUMANOS (M5)
-
-**Antes de cerrar este módulo**, activar la capa:
-
-1. **Test de resistencia:**
-   "Mirando la primera semana del plan, ¿hay alguna tarea que te genere resistencia real?"
-   - Si sí → descomponer en subtareas más pequeñas o sustituir por equivalente menos intimidante.
-
-2. **Ajustes por factores detectados:**
-   - Urgencia alta → verificar que Sprint 1 tiene hito de ingreso.
-   - Miedo al rechazo → primeras conversaciones con red de confianza.
-   - Perfeccionismo → fechas límite fijas + regla "publicar aunque no esté perfecto".
-   - Fracaso previo por aislamiento → incluir comunidad/accountability como tarea.
-
-3. **Calibración de ritmo:**
-   Comparar horas/semana disponibles (P7) con carga del plan.
-   Si no cuadra, reducir scope — nunca inflar disponibilidad.
-
-4. **Actualizar factores humanos en estado:**
-   Añadir `"M5"` a `human_factors.updated_at_modules`.
-
-## REGLA CRÍTICA — VERIFICACIÓN DE HERRAMIENTAS
-
-Antes de incluir CUALQUIER herramienta en el plan o en el apéndice:
-
-1. **Consultar stack existente del usuario** (P8b del intake). Si ya tiene
-   una herramienta que cubre esa función, usarla — no recomendar otra.
-
-2. **Verificar pricing actual con web_search.** No basarse en conocimiento
-   previo para datos de precios. Las herramientas cambian de plan, suben
-   precios o eliminan planes gratuitos constantemente.
-
-3. **Incluir siempre alternativa gratuita o freemium** junto a cada
-   herramienta de pago. Si no existe alternativa gratuita viable, decirlo
-   explícitamente.
-
-4. **Si el usuario tiene presupuesto limitado (<1.000€)**, priorizar
-   herramientas gratuitas y solo mencionar las de pago como "cuando puedas
-   invertir más".
-
-## Entregable M5
-
-**DOCX** — "Plan de 90 Días — [Nombre]" con:
-- Resumen ejecutivo del plan
-- Las 13 semanas detalladas
-- Apéndice: stack de herramientas recomendado (con links, coste VERIFICADO, alternativas gratuitas)
-- Notas de calibración por factores humanos (si aplica)
-
-Si tienes la skill `docx` instalada, lee su SKILL.md antes de generar.
-
-## Persistencia
-
-Actualizar estado. Registrar ajustes por factores humanos en `decisions_log`.
-
-## Checkpoint M5
-
-> "Plan de 90 días generado. ¿Ajustamos alguna semana según tu disponibilidad
-> real o alguna tarea que te genere resistencia?"
+> Este es tu plan. ¿Ajustamos alguna semana a tu disponibilidad real o alguna tarea que no te veas haciendo?

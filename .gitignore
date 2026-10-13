@@ -8,3 +8,8 @@ Thumbs.db
 CLAUDE.md
 entregables-business-launcher/
 .claude/
+
+# Ficha de progreso local (Claude Code / Cowork)
+/business-launcher/
+/dist/
+evals/results/

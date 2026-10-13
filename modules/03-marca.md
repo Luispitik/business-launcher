@@ -1,73 +1,27 @@
-# Módulo 03 — Identidad de marca
+# M3 — Identidad de marca
 
 ## Objetivo
 
-Crear identidad visual y verbal coherente: nombre, logo, colores, tipografía,
-tono de comunicación y manual de marca completo.
+Una identidad verbal y visual coherente con la oferta de M2. El alcance depende de la ruta (`config/route-profiles.md`): completo para Definidor; mínimo para Explorador (nombre provisional, frase de posicionamiento y tono); revisión de coherencia si ya tiene marca.
 
-## Pre-requisitos
+## Contenido
 
-- Cargar estado (P8 del intake indica si ya tiene marca).
-- Si ya tiene marca sólida y la ruta lo permite → saltar o reducir a ajuste.
+### Nombre (si no lo tiene)
+Tres opciones valoradas por memorabilidad, coherencia con el posicionamiento y pronunciación en español (y en inglés si vende fuera). Busca en la web si hay negocios, marcas o webs activas con ese nombre en su sector. La disponibilidad del dominio y de la marca registrada no se confirma con una búsqueda: márcala `[PENDIENTE: comprobar en un registrador de dominios, en la OEPM y, si vende fuera de España, en la EUIPO]`. Si será una sociedad, añade la certificación negativa de denominación del Registro Mercantil Central.
 
-## Ejecución
+### Sistema verbal
+Nombre, frase de posicionamiento, tono de voz en tres adjetivos, dos o tres ejemplos de lo que la marca nunca diría, palabras clave, presentación de 30 segundos y biografía profesional corta.
 
-### 3.1 Naming (si no tiene nombre)
+### Sistema visual
+Paleta (primario, secundario, acento y neutros, con HEX y RGB), tipografías para titulares y texto con su jerarquía, estilo de iconografía y de fotografía.
 
-Proponer 3 opciones evaluando:
-- Memorabilidad
-- Disponibilidad como dominio .com / .es (verificar con web_search)
-- Coherencia con el posicionamiento del M2
-- Pronunciabilidad en español e inglés
+### Logo
+Si la persona es diseñadora o va a encargarlo, entrega un brief creativo en lugar del logo. Si no, y la skill `canvas-design` está disponible, genera el logo principal, la versión solo símbolo, las variantes clara y oscura y el favicon: SVG como fuente y PNG en alta resolución exportado desde él (si el entorno no puede rasterizar, entrega el SVG y di que el PNG queda pendiente). Debe funcionar a tamaño pequeño y distinguirse de los competidores de M1. Un logo generado con IA puede no estar protegido por derechos de autor: si es importante para el negocio, la vía es registrarlo como marca tras comprobar que no se parece a marcas ya inscritas.
 
-### 3.2 Sistema verbal
+## Entregable
 
-```
-Nombre de marca: [nombre]
-Tagline: [frase de posicionamiento corta]
-Tono de voz: [3 adjetivos]
-Lo que nunca diría: [2-3 ejemplos de tono que NO encaja]
-Palabras clave de marca: [8-10 palabras]
-Elevator pitch (30 segundos): [texto]
-Bio profesional corta: [texto]
-```
+DOCX "Manual de marca — [nombre]": presentación (propósito, valores, personalidad), sistema verbal, sistema visual con logo y variantes, reglas de uso y ejemplos de aplicación (firma de correo, cabecera de LinkedIn, tarjeta). En la versión mínima de Explorador, una página con nombre provisional, posicionamiento y tono. Anota en la ficha si se hizo, se redujo o se saltó.
 
-### 3.3 Sistema visual
+## Checkpoint
 
-**Paleta de color**: Primario, secundario, acento, neutros (HEX + RGB).
-**Tipografía**: Principal (titulares), secundaria (cuerpo), jerarquía H1-Caption.
-**Elementos gráficos**: Estilo de iconografía, estilo fotográfico.
-
-### 3.4 Logo
-
-Si tienes la skill `canvas-design` instalada, lee su SKILL.md antes de ejecutar.
-
-Generar:
-- Logo principal (símbolo + nombre)
-- Logo secundario (solo símbolo)
-- Variante dark / light
-- Favicon
-
-Formato: PNG alta resolución + SVG si posible.
-
-**Criterios**: Coherente con posicionamiento, funcional en tamaño pequeño,
-sin efectos que no escalen, original vs competidores del M1.
-
-### 3.5 Manual de marca
-
-Si tienes la skill `docx` instalada, lee su SKILL.md antes de generar.
-
-**DOCX** — "Manual de Marca — [Nombre]" con:
-1. Presentación de la marca (propósito, valores, personalidad)
-2. Sistema verbal completo
-3. Sistema visual completo (paleta, tipografía, logo y variantes)
-4. Reglas de uso (qué hacer / qué no hacer)
-5. Ejemplos de aplicación (tarjeta, firma email, cabecera LinkedIn)
-
-## Persistencia
-
-Actualizar estado con M3 completado. Si se saltó, registrar en `decisions_log`.
-
-## Checkpoint M3
-
-> "Manual de marca listo. ¿Ajustamos algo antes de generar los documentos comerciales?"
+> Esta es la identidad de tu marca. ¿Ajustamos algo antes de seguir?

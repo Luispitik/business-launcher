@@ -1,0 +1,7 @@
+{
+  "id": "pregunta-suelta",
+  "proposito": "Una duda puntual de precio no debe lanzar la entrevista completa: se responde directamente.",
+  "prompt": "¿Cuánto debería cobrar por una sesión de fisioterapia a domicilio en Vigo? Dame un rango.",
+  "must": ["€|euros"],
+  "must_not": ["(?i)cu[áa]l de estas situaciones", "(?i)c[óo]mo te llamas"]
+}

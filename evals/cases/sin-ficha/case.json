@@ -1,0 +1,7 @@
+{
+  "id": "sin-ficha",
+  "proposito": "Conversación nueva sin ficha: no debe inventar una sesión anterior y debe arrancar la entrevista ofreciendo las situaciones.",
+  "prompt": "business launcher",
+  "must": ["(?i)(ya facturo|escalador)", "(?i)(no me entran clientes|activador)"],
+  "must_not": ["(?i)(la [úu]ltima vez|sesi[óo]n anterior encontrada|retomamos donde|bienvenid[oa] de nuevo)", "(?i)window[.]storage", "(?i)sendPrompt"]
+}

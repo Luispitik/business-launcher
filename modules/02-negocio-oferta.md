@@ -1,231 +1,71 @@
-# Módulo 02 — Diseño del negocio y oferta
+# M2 — Modelo de negocio y oferta
 
 ## Objetivo
 
-Definir el modelo de negocio, la propuesta de valor, el cliente ideal y la
-estructura de servicios con tarifas. Incluye checkpoint de factores humanos,
-fase de expansión proactiva de catálogo, y visión estratégica de evolución.
+Definir cómo gana dinero el negocio, a quién sirve, qué promete y qué cobra. Parte del perfil, la ruta y los resultados de M1 que ya tienes en la conversación, y aplica el checkpoint de `layers/factores-humanos.md` al cerrar.
 
-## Pre-requisitos
+## Calibración de perfil
 
-- Cargar estado persistido (user_profile, human_factors, M1 completado).
-- Para checkpoint: leer `${CLAUDE_SKILL_DIR}/layers/factores-humanos.md`.
+Antes de proponer precios o expectativas, sitúa a la persona en uno de estos perfiles y ancla cada precio al cuartil que le corresponde, usando los rangos reales de M1:
 
-## REGLA CRÍTICA — CALIBRACIÓN DE PERFIL
+| Perfil | Señales del intake | Precio |
+|---|---|---|
+| Arranca de cero | Sin clientes, sin portfolio, sin marca | Cuartil bajo-medio del mercado: un precio que pueda decir sin tartamudear. |
+| Por cuenta propia sin estructura | Tiene clientes pero no proceso ni precios formales | Cuartil medio: formaliza lo que ya cobra y súbelo solo con evidencia (acepta casi todas sus propuestas, tiene más demanda que capacidad o hay comparables con fuente que cobran más por el mismo alcance), y di cuál. |
+| Profesional con base | Clientes, marca y algo de portfolio | Cuartil medio-alto, comparado directamente con M1. |
+| Veterano que escala | Factura de forma regular, clientes recurrentes, proceso definido | Cuartil alto; por encima del mercado solo si al menos un comparable con fuente ya cobra así. |
 
-Antes de diseñar cualquier precio o expectativa, clasificar al usuario:
+A quien arranca de cero, el síndrome del impostor ya le frena bastante; unos precios de profesional con base le paralizan, y un precio que no se atreve a decir no se cobra. Anota el nivel en la ficha (`calibration_level`).
 
-| Perfil | Indicadores del intake | Calibración de pricing |
-|--------|----------------------|----------------------|
-| **Arranca de cero** | Empleado, sin clientes, sin portfolio, sin marca | Cuartil bajo-medio del mercado freelance. Precio que pueda decir sin tartamudear. |
-| **Freelance sin estructura** | Tiene clientes pero sin proceso, sin precios formales | Cuartil medio. Formalizar lo que ya cobra + subida del 15-20%. |
-| **Profesional con base** | Tiene clientes, marca, algo de portfolio | Cuartil medio-alto. Benchmarking directo con M1. |
-| **Veterano que escala** | Factura regular, clientes recurrentes, proceso definido | Cuartil alto o por encima de mercado si diferencial lo justifica. |
+Cada rango de precio cita al menos tres comparables de alcance equivalente con enlace y fecha; si hay menos, dilo y ánclalo en lo que la persona ya ha cobrado. Comprueba el precio por hora que implica. Las horas y los plazos salen de lo que la persona ha tardado otras veces; si los propones tú, preséntalos como rango e hipótesis.
 
-**Esta tabla es obligatoria.** No asignar precios de "profesional con base" a
-alguien que es "arranca de cero". El síndrome del impostor ya le frena bastante
-— unos precios inflados le paralizan del todo.
+## Precio suelo
 
-## REGLA CRÍTICA — VERIFICACIÓN DE COHERENCIA
+Precio suelo = (ingreso neto mensual que necesita + cuota de autónomos + gastos fijos + reserva para IRPF) ÷ horas facturables reales al mes, descontando las horas de captación, gestión y formación. Ningún precio óptimo por debajo del suelo sin decirlo. Recuerda que el IVA cobrado no es ingreso: a empresas, el precio se da sin IVA; a particulares, el precio final con impuestos.
 
-Antes de proponer CADA servicio y CADA precio, verificar contra:
-1. **Principios declarados** en el intake y la conversación (si dijo "no quiero
-   vender tiempo por dinero", no diseñar servicios por horas).
-2. **Situación real** (si dijo "empleado que arranca con 1.000€", no proponer
-   stack de herramientas de 200€/mes).
-3. **Capacidad técnica** (si no sabe programar, no incluir servicios de desarrollo).
+## Coherencia con lo que ha contado
 
-Si Claude detecta una incoherencia con algo que el usuario dijo, **corregirla
-antes de presentar**, no esperar a que el usuario la detecte.
+Cada servicio y cada precio encaja con sus principios (si dijo "no quiero vender horas", nada por horas), su situación (si arranca con 1.000 €, nada de herramientas de 200 €/mes) y sus capacidades (si no programa, nada de desarrollo). Si una incoherencia tiene un arreglo evidente, corrígela antes de presentar y dilo en una línea. Si arreglarla obliga a elegir entre dos cosas que la persona quiere, plantéalo como decisión: "Has dicho [principio], pero [servicio] choca con eso porque [razón]. ¿Qué pesa más?".
 
-## Ejecución
+## Contenido
 
-### 2.1 Modelo de negocio
+### Modelo de negocio
+Cómo genera dinero (proyecto, cuota mensual, sesiones, formación, producto…), cuál es el servicio tractor (el que convierte curiosidad en un primer pago), cuál deja más margen y cuál da recurrencia. Por ruta: Explorador diseña un único servicio, el más fácil de validar; Redefinidor reconstruye a partir de su oferta actual; Escalador productiza lo que ya vende; Activador revisa la oferta con la lente de conversión (¿se entiende en diez segundos?).
 
-Definir con el usuario:
-- ¿Cómo genera dinero? (proyecto, retainer, formación, SaaS, marketplace...)
-- ¿Cuál es el servicio tractor? (convierte curiosidad en primer pago)
-- ¿Cuál es el servicio de mayor margen?
-- ¿Cuál es el servicio de recurrencia?
+### Cliente ideal
+Para un negocio que vende a empresas: sector, tamaño, cargo de quien decide, problema principal, cómo lo describe el cliente, qué ha probado sin éxito y por qué esta persona es la solución. Para uno que vende a particulares: perfil de la persona, el momento en que busca ayuda, quién paga y quién decide, qué ha probado antes y dónde busca.
 
-**Ajuste por ruta:**
-- Explorador: empezar con 1 servicio único (el más validable en M1). No diseñar catálogo completo aún.
-- Redefinidor: partir de servicios actuales, reconstruir — no diseñar desde cero.
-- Escalador: enfocarse en productización de servicios existentes y subida de precios.
-- Activador: revisar con lente de conversión — ¿se entiende en 10 segundos?
+### Propuesta de valor
+"Ayudo a [cliente] a [resultado concreto] sin [frustración habitual] en [plazo realista]."
 
-### 2.2 Cliente ideal (ICP)
+### Catálogo
+Para cada servicio: nombre, descripción para el cliente, entregable, plazo, precio mínimo / óptimo / premium (calibrado), costes recurrentes de terceros si los hay (licencias, herramientas, desplazamientos), margen estimado, horas de trabajo, a quién va dirigido, qué servicio lo precede y variantes de entrega si aplica (remoto o presencial, lo gestiona la persona o lo opera el cliente).
 
-```
-Sector: [industria]
-Tamaño de empresa: [empleados / facturación]
-Rol del decisor: [cargo]
-Problema principal que resuelves: [frase concreta]
-Síntoma que siente el cliente: [cómo lo describe]
-Lo que ha intentado antes sin éxito: [alternativas fallidas]
-Por qué tú eres la solución: [diferencial concreto]
-```
+### Ampliación del catálogo
+Salvo en Explorador, revisa si hay servicios complementarios que la persona no ha mencionado y que son extensión natural de su perfil, y propónselos con el motivo de cada uno. Propón solo los que encajen; si no ves ninguno, dilo. Huecos típicos: recurrencia (mantenimiento o cuota) cuando todo son proyectos sueltos, una puerta de entrada de bajo coste cuando no hay servicio tractor, formación cuando el cliente necesitará autonomía. La decisión es suya.
 
-### 2.3 Propuesta de valor
+Si el catálogo acaba con varios servicios que exigen seguimiento posterior, valora una cuota mensual integral (qué cubre, qué no, horas incluidas, precio inferior a la suma de mantenimientos sueltos).
 
-Estructura:
-> "Ayudo a [ICP] a [resultado concreto] sin [frustración habitual] en [plazo realista]."
+### Tarifas y costes
+Tabla de servicios con rango de precios, su justificación con datos de M1 y su posición respecto al precio suelo. Para cada coste de terceros, el precio actual con fuente de la búsqueda web y quién lo paga (incluido o facturado aparte).
 
-### 2.4 Catálogo de servicios
+### Evolución de precios
+Presenta cada precio con su progresión: lanzamiento, primer ajuste (y la condición: número de clientes o testimonios), segundo ajuste y objetivo a 18 meses. En Explorador, solo el precio de validación; la progresión espera a que el nicho se confirme.
 
-Para cada servicio:
-```
-Nombre: [nombre comercial]
-Descripción: [1-2 frases para el cliente]
-Entregable: [qué recibe exactamente]
-Plazo: [días/semanas]
-Precio mínimo | óptimo | premium: [€] ← CALIBRADO según tabla de perfil
-Costes operativos recurrentes: [APIs, licencias, hosting — desglosados]
-Margen real estimado: [% después de costes operativos]
-Nivel de esfuerzo: [horas de trabajo]
-Cliente ideal para este servicio: [quién lo compra]
-Servicio previo recomendado: [embudo]
-Variantes: [cloud vs self-hosted, si aplica]
-```
+### Primeros clientes
+Para quien arranca o reorienta: piloto reducido a precio simbólico, precio de fundador con fecha límite, o diagnóstico sin coste a cambio de opinión y permiso para contarlo como caso. Recomienda una opción según perfil y urgencia, con estas condiciones:
+- El testimonio es la opinión real del cliente, con sus palabras y su consentimiento por escrito (y el de imagen si sale en vídeo); si recibió el servicio gratis o con descuento, se indica al publicarlo.
+- La fecha límite y las plazas del precio de fundador son ciertas y se cumplen.
+- En profesiones sanitarias la publicidad con testimonios de pacientes está prohibida, y otras profesiones colegiadas tienen normas propias: confírmalo con su colegio antes de proponerlo.
 
-### 2.5 FASE DE EXPANSIÓN DE CATÁLOGO (obligatoria)
+Para Escalador, en su lugar: cómo comunicar la subida a los clientes actuales y cuándo aplicarla.
 
-Tras diseñar el catálogo inicial, Claude **propone proactivamente** servicios
-complementarios que el usuario no haya mencionado pero que sean extensiones
-naturales de su perfil:
+## Entregable
 
-> "Antes de cerrar el catálogo, he identificado [N] servicios complementarios
-> que encajan con tu perfil y que podrías considerar. No tienes que añadir
-> ninguno — pero quiero que los veas antes de decidir:"
->
-> 1. [Servicio X] — [Por qué encaja con su perfil]
-> 2. [Servicio Y] — [Por qué encaja]
-> 3. [Servicio Z] — [Por qué encaja]
->
-> "¿Alguno te interesa incorporar?"
+DOCX "Modelo de negocio y oferta — [nombre]": modelo, cliente ideal, propuesta de valor, catálogo con costes, cuota integral si aplica, tarifas justificadas, evolución de precios, primeros clientes y, si la persona teme vender, el guion de conversación de descubrimiento de M7. Anota en la ficha las decisiones de precio.
 
-**Criterios para proponer servicios complementarios:**
-- Servicios de mantenimiento/retainer si solo ha diseñado proyectos puntuales.
-- Versión self-hosted vs cloud si el servicio implica infraestructura técnica.
-- Servicio de auditoría/diagnóstico si no tiene servicio tractor de bajo coste.
-- Formación/capacitación si su ICP necesita autonomía posterior.
-- Diagramas de flujo / documentación visual como entregable estándar en consultoría.
-- Vibe Coding / desarrollo visual si tiene capacidades técnicas para ello.
+## Checkpoint
 
-### 2.6 DISEÑO DE MANTENIMIENTO INTEGRAL
+Aplica el checkpoint de M2 de `layers/factores-humanos.md` y pasa el catálogo final por los criterios de coherencia (los cambios hechos durante la conversación son los que suelen romperla). Después:
 
-Si el catálogo incluye más de 2 servicios que generan necesidad de seguimiento
-posterior, **diseñar un retainer integral** en vez de mantenimiento servicio a servicio:
-
-```
-RETAINER INTEGRAL — [Nombre]
-
-Concepto: Un solo contrato de mantenimiento que cubre todo lo implementado.
-Módulos incluidos: [lista de servicios cubiertos]
-Precio mensual: [€] (siempre inferior a la suma de mantenimientos individuales)
-Horas incluidas: [N horas/mes]
-Qué cubre: [soporte, actualizaciones, optimización, monitorización]
-Qué NO cubre: [nuevos desarrollos, ampliaciones de scope]
-Escalado: Si el cliente añade nuevos servicios, el retainer sube [€X] por módulo.
-```
-
-### 2.7 Estructura de tarifas
-
-Tabla con todos los servicios, rangos de precio y justificación basada en M1.
-
-**Sección obligatoria — Costes operativos por servicio:**
-Para cada servicio que implique herramientas de terceros:
-- Coste de APIs (estimación mensual por cliente).
-- Licencias de software necesarias.
-- Hosting / infraestructura.
-- **Verificar precios actuales con web_search.** No basarse en conocimiento previo.
-- Política de quién paga los costes operativos (incluido en precio vs facturado aparte).
-
-### 2.8 VISIÓN ESTRATÉGICA (obligatoria)
-
-#### Plan de evolución de precios
-
-```
-HOJA DE RUTA DE PRICING
-
-Precio de lanzamiento (meses 1-3): [€] ← calibrado al perfil actual
-Primer ajuste (mes 4-6): [€] [+X%] [condición: cuando tenga N clientes/testimonios]
-Segundo ajuste (mes 7-12): [€] [+X%] [condición: cuando tenga portfolio visible]
-Objetivo a 18 meses: [€] [cuartil del mercado al que aspira]
-```
-
-Nunca presentar solo el precio actual. Siempre incluir la progresión.
-
-#### Estrategia de primeros clientes
-
-```
-PLAN DE INVERSIÓN INICIAL
-
-Opción A — Auditoría/diagnóstico gratuito:
-  Ofrecer [servicio tractor] gratis a [N] primeros clientes a cambio de:
-  - Testimonial escrito o en vídeo
-  - Permiso para usar como caso de estudio
-  - 1-2 referidos cualificados
-
-Opción B — Descuento fundador:
-  [X]% de descuento para los primeros [N] clientes.
-  Con fecha límite: "hasta [fecha] o hasta completar [N] plazas".
-
-Opción C — Piloto reducido:
-  Versión reducida del servicio a precio simbólico.
-  Objetivo: validar el proceso y generar confianza.
-
-Recomendación: [A / B / C según perfil y urgencia]
-```
-
-**Si el usuario arranca de cero, esta sección no es opcional — es el primer
-paso del plan de 90 días.**
-
-## CHECKPOINT DE FACTORES HUMANOS (M2)
-
-**Antes de cerrar este módulo**, activar la capa de factores humanos:
-
-1. **Test de pricing emocional:**
-   "El precio óptimo de tu servicio principal es €[X]. ¿Te genera incomodidad
-   decirlo en voz alta a un potencial cliente?"
-   - Si sí → trabajar la justificación con evidencia de mercado del M1.
-   - Registrar en `human_factors`.
-
-2. **Verificación de coherencia final:**
-   Revisar todo el catálogo contra los principios declarados por el usuario.
-   Si algo no cuadra, señalarlo: "Has dicho [principio] pero el servicio [X]
-   contradice eso porque [razón]. ¿Ajustamos?"
-
-3. **Revisión de miedos vs oferta:**
-   - Si miedo a vender → añadir al entregable un "script de conversación de
-     descubrimiento" (no guion de ventas).
-   - Si urgencia alta → verificar que el servicio tractor se puede vender en <2 semanas.
-   - Si fracaso previo por pricing bajo → mostrar comparativa de mercado.
-
-4. **Actualizar factores humanos en estado:**
-   Añadir `"M2"` a `human_factors.updated_at_modules`.
-
-## Entregable M2
-
-**DOCX** — "Modelo de Negocio y Oferta — [Nombre]" con:
-- Modelo de negocio
-- ICP
-- Propuesta de valor
-- Catálogo de servicios (tabla completa con costes operativos)
-- Retainer integral (si aplica)
-- Estructura de tarifas con justificación
-- Plan de evolución de precios
-- Estrategia de primeros clientes
-- Script de conversación de descubrimiento (si aplica)
-
-Si tienes la skill `docx` instalada, lee su SKILL.md antes de generar.
-
-## Persistencia
-
-Actualizar estado con M2 completado, decisiones de pricing en `decisions_log`.
-
-## Checkpoint M2
-
-> "Aquí tienes el modelo completo. Antes de seguir: ¿hay algún servicio que
-> quieras añadir, quitar o modificar el precio? ¿Algo que no encaje con cómo
-> quieres trabajar?"
+> Este es el modelo completo. ¿Hay algún servicio que quieras añadir o quitar, o algún precio que no te veas diciendo?
