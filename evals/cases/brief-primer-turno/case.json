@@ -1,0 +1,8 @@
+{
+  "id": "brief-primer-turno",
+  "proposito": "Con la situación ya contada en el primer mensaje, la primera respuesta entrega el brief inicial en borrador (encabezado, ruta, huecos en [PENDIENTE] y lo que la persona ya dijo) y no abre la entrevista de diferencial, factores humanos ni herramientas. Como máximo tres preguntas.",
+  "prompt": "business launcher. Soy Ana, diseñadora gráfica en Sevilla, por cuenta ajena. Tengo clara la idea: identidad visual para clínicas dentales, pero no he arrancado. Puedo dedicarle 8 horas a la semana y unos 400 euros de presupuesto. Quiero complementar ingresos.",
+  "must": ["(?i)brief inicial\\s*\\(borrador\\)", "(?i)definidor", "\\[PENDIENTE\\]", "(?i)cl[íi]nicas dentales"],
+  "must_not": ["(?i)conocimiento te distingue", "(?i)mayor bloqueo", "(?i)has intentado algo parecido", "(?i)meses puedes sostener", "(?i)herramientas y suscripciones", "(?i)c[óo]mo te llamas", "(?i)cu[áa]l de estas situaciones"],
+  "max_preguntas": 3
+}

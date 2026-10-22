@@ -1,8 +1,8 @@
 {
   "name": "business-launcher",
   "displayName": "Business Launcher",
-  "version": "4.0.0",
-  "description": "Skill en español que te entrevista, detecta en qué punto está tu negocio de servicios (5 rutas) y construye contigo el plan: mercado, oferta y precios, marca, documentación de arranque, plan de 90 días, prompt para tu web y base de captación.",
+  "version": "4.0.1",
+  "description": "Skill en español que en el primer mensaje te deja un brief en borrador de tu negocio de servicios (5 rutas) y construye contigo el plan: mercado, oferta y precios, marca, documentación de arranque, plan de 90 días, prompt para tu web y base de captación.",
   "author": { "name": "Luis Salgado", "url": "https://salgadoia.com" },
   "homepage": "https://github.com/Luispitik/business-launcher",
   "repository": "https://github.com/Luispitik/business-launcher",

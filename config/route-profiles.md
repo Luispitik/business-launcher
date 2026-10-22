@@ -22,7 +22,7 @@ Si la señal es ambigua, pregunta directamente: "¿Te identificas más con [A] o
 
 Factura de forma regular, tiene clientes y un modelo que funciona. Quiere optimizar precios, productizar, formalizar procesos o construir equipo. Necesita estructura para crecer sin romper lo que ya funciona.
 
-- El intake pide métricas concretas (facturación mensual, clientes, ticket medio y, si las tiene, conversión y horas por semana); valen aproximadas.
+- Tras el brief inicial, si faltan, el turno de huecos pide las métricas concretas (facturación mensual, clientes, ticket medio y, si las tiene, conversión y horas por semana); valen aproximadas.
 - M1 compara precios y posicionamiento con sus competidores directos.
 - M2 se centra en productizar (convertir trabajos a medida en paquetes repetibles) y en la subida de precios, incluida cómo comunicarla a los clientes actuales.
 - M4 parte de sus contratos actuales: pídelos antes de revisar y añade lo que el crecimiento exige (subcontratación, equipo, niveles de servicio).
@@ -33,7 +33,7 @@ Factura de forma regular, tiene clientes y un modelo que funciona. Quiere optimi
 
 Tiene el negocio montado y no le entran clientes, o le entran de forma puntual sin sistema. El problema es de distribución, no de producto.
 
-- El intake audita lo que ya tiene: oferta, marca, web, contratos, presencia digital, red de contactos e intentos previos de captación.
+- Tras el brief inicial, el turno de huecos audita lo que el brief aún tenga en `[PENDIENTE]`: oferta, marca, web, contratos, presencia digital, red de contactos e intentos previos de captación.
 - M1 investiga canales: dónde está su cliente, qué consume, quién le vende ya cosas parecidas y cómo capta.
 - M7 es el módulo central: diagnóstico de por qué no entran clientes y sistema de captación.
 - M2 revisa la oferta con la lente de conversión (¿se entiende en diez segundos?, ¿el precio facilita la primera compra?), sin rediseñarla desde cero.
@@ -44,7 +44,7 @@ Tiene el negocio montado y no le entran clientes, o le entran de forma puntual s
 
 Tiene negocio, clientes o experiencia por cuenta propia y quiere pivotar de sector, reestructurar la oferta o formalizar lo que hacía sin estructura. Necesita rediseñar aprovechando lo que ya tiene.
 
-- El intake hace inventario de activos: clientes, facturación, marca, contratos, web.
+- Tras el brief inicial, el turno de huecos hace el inventario de los activos que falten: clientes, facturación, marca, contratos, web.
 - M1 investiga el mercado que deja y el mercado al que va, y qué activos se transfieren.
 - M2 reconstruye a partir de la oferta actual.
 - M3 y M4 se ajustan o se saltan si ya tiene marca o contratos sólidos.
@@ -64,7 +64,7 @@ Sabe qué quiere hacer y no ha ejecutado nada. Necesita estructura y orden.
 
 Tiene habilidades y experiencia y no sabe qué negocio montar, o tiene varias ideas sin claridad sobre cuál elegir. Necesita descubrir antes de construir: lo primero que le hace falta son conversaciones con clientes potenciales, no un plan completo.
 
-- El intake incluye una auditoría de fortalezas: qué sabe hacer, qué le piden, qué disfruta.
+- Tras el brief inicial, el turno de huecos incluye la auditoría de fortalezas que falte: qué sabe hacer, qué le piden, qué disfruta.
 - M1 investiga dos o tres nichos en paralelo y los compara; la persona elige con cuál seguir.
 - M2 diseña un único servicio, el más fácil de validar; catálogo, retainer y hoja de precios a 18 meses esperan a la validación.
 - M3 mínimo: nombre provisional, frase de posicionamiento y tono. M4 checklist: solo las obligaciones de arranque y la compatibilidad con su situación laboral.

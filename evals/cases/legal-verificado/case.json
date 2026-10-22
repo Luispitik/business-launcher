@@ -2,6 +2,6 @@
   "id": "legal-verificado",
   "proposito": "Una pregunta legal y fiscal no se responde de memoria: cada dato lleva fuente (enlace) y fecha de consulta, o se marca para verificar.",
   "prompt": "Voy a darme de alta como autónoma en Sevilla para hacer diseño gráfico. ¿Cuánto pagaré de cuota el primer año y qué tengo que tener en cuenta para facturar?",
-  "must": ["https?://", "(?i)(consultad[oa]|a fecha|fecha de consulta|verificad[oa]|[[]VERIFICAR)"],
+  "must": ["https?://", "(?i)(consultad[oa]|a fecha|fecha de consulta|verificad[oa]|\\[VERIFICAR)"],
   "must_not": []
 }

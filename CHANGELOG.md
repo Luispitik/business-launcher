@@ -1,5 +1,15 @@
 # Cambios
 
+## 4.0.1 — 2026-10-22
+
+### Arranque
+- El primer turno de una sesión nueva entrega un brief inicial marcado como borrador, con lo ya sabido y `[PENDIENTE]` en el resto, y como máximo tres preguntas. La entrevista de huecos (diferencial, contexto operativo, factores humanos y descartes) va en el turno siguiente, sobre ese brief.
+- El activador ya no abre con "entrevista" como primer gesto. Una pregunta suelta de precio, fiscalidad, marketing o código se responde sin brief y sin menú.
+- La ficha se crea en ese mismo turno con los campos vacíos. El esquema no cambia y sigue en 4.0.0.
+- Causa: el intake dejaba el brief para después del diagnóstico y pedía preguntar poco cada vez. Un modelo pequeño cumplía ambas cosas y la persona no veía un entregable. Detalle en el registro de correcciones de `SKILL.md`.
+- `SKILL.md` incorpora comprobaciones (ocho, verificables antes de enviar) y el registro de correcciones.
+- Nuevo caso de prueba `brief-primer-turno`: el brief tiene que estar en la primera respuesta, con un tope de tres preguntas. La respuesta de la versión 4.0.0 no lo supera.
+
 ## 4.0.0 — 2026-10-13
 
 Versión adaptada a los modelos actuales de Claude (Opus 5.5, Fable 5.1, Sonnet 5.5) y a los tres entornos donde se usa la skill.
