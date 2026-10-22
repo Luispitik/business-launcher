@@ -1,0 +1,42 @@
+{
+ "skill_dir": "/workspace",
+ "model": "subagente siguiendo la skill al pie de la letra; no hay CLI claude en esta máquina (ver LEEME)",
+ "casos": [
+  {
+   "id": "brief-primer-turno",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Con la situación ya contada en el primer mensaje, la primera respuesta entrega el brief inicial en borrador (encabezado, ruta, huecos en [PENDIENTE] y lo que la persona ya dijo) y no abre la entrevista de diferencial, factores humanos ni herramientas. Como máximo tres preguntas."
+  },
+  {
+   "id": "datos-en-primer-mensaje",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Si el primer mensaje ya dice profesión, ciudad y situación, no vuelve a preguntarlo y reconoce la ruta Activador."
+  },
+  {
+   "id": "legal-verificado",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Una pregunta legal y fiscal no se responde de memoria: cada dato lleva fuente (enlace) y fecha de consulta, o se marca para verificar."
+  },
+  {
+   "id": "pregunta-suelta",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Una duda puntual de precio no debe lanzar la entrevista completa: se responde directamente."
+  },
+  {
+   "id": "retomar-activador",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Con ficha de Activador (M0 y M1 hechos) en la carpeta de trabajo: debe retomar y proponer la captación (M7) como siguiente fase, sin reiniciar la entrevista."
+  },
+  {
+   "id": "sin-ficha",
+   "ok": true,
+   "fallos": [],
+   "proposito": "Conversación nueva sin ficha: no debe inventar una sesión anterior y debe arrancar la entrevista ofreciendo las situaciones."
+  }
+ ]
+}

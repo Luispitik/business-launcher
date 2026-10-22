@@ -1,9 +1,9 @@
 """Behaviour evals for Business Launcher, run against the real Claude Code CLI.
 
-Each case in evals/cases/<id>/ has case.json (prompt, optional fixture, must / must_not regexes)
-and malo.txt, a known-bad answer. The grader must reject every malo.txt before any real result
-is trusted (canary). Each case runs in a fresh temporary folder with the skill copied to
-.claude/skills/business-launcher, so only this copy of the skill can load.
+Each case in evals/cases/<id>/ has case.json (prompt, optional fixture, must / must_not regexes,
+optional max_preguntas) and malo.txt, a known-bad answer. The grader must reject every malo.txt
+before any real result is trusted (canary). Each case runs in a fresh temporary folder with the
+skill copied to .claude/skills/business-launcher, so only this copy of the skill can load.
 
 Usage: python evals/run_evals.py [--skill-dir DIR] [--model claude-opus-5-5] [--only id,id] [--out DIR]
 """
@@ -16,6 +16,9 @@ SKIP = {'.git', 'evals', 'scripts', 'dist', '.claude-plugin', 'business-launcher
 def grade(text, case):
     fails = [f'falta: {p}' for p in case.get('must', []) if not re.search(p, text)]
     fails += [f'prohibido: {p}' for p in case.get('must_not', []) if re.search(p, text)]
+    limite = case.get('max_preguntas')
+    if limite is not None and text.count('?') > limite:
+        fails.append(f'demasiadas preguntas: {text.count("?")} > {limite}')
     return fails
 
 

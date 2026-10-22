@@ -1,6 +1,6 @@
 # Business Launcher
 
-**Una skill de Claude que te entrevista, entiende en qué punto está tu negocio y construye contigo el plan completo: del "no sé qué vender" o "no me entra ni un cliente" a una oferta con precio, documentos de arranque y un plan de 90 días.**
+**Una skill de Claude que, con lo que ya le cuentes, te deja un brief en borrador y construye contigo el plan de tu negocio: del "no sé qué vender" o "no me entra ni un cliente" a una oferta con precio, documentos de arranque y un plan de 90 días.**
 
 En español, pensada para España y de código abierto (MIT). Presentada en el episodio 3 de [Más allá del prompt](https://podcastmadp.com/).
 
@@ -18,6 +18,8 @@ En español, pensada para España y de código abierto (MIT). Presentada en el e
 business launcher. Soy [profesión] en [ciudad]. Ahora mismo [tu situación en una frase].
 Se me da bien [...]. Puedo dedicarle [horas a la semana].
 ```
+
+Con eso, la primera respuesta es un brief en borrador. Lo que no hayas dicho queda pendiente: no hace falta contarlo todo antes de ver algo.
 
 No monta tu web, no tramita tu alta ni sustituye a una gestoría o a un abogado: los documentos son borradores de trabajo.
 
@@ -54,11 +56,11 @@ Instala una sola copia por entorno. Para los entregables en Word, instala tambi�
 
 ## Cómo funciona
 
-La entrevista inicial detecta tu ruta y adapta el recorrido. Según la ruta, pasa por estas fases:
+La sesión empieza con un brief inicial en borrador, hecho con lo que ya has contado y con los huecos marcados. Sobre ese brief, unas pocas preguntas cierran la ruta y el perfil. Según la ruta, el recorrido pasa por estas fases:
 
 | # | Fase | Qué produce |
 |---|---|---|
-| 0 | Entrevista | Ruta, perfil calibrado y brief de negocio |
+| 0 | Brief y ruta | Brief inicial en borrador, perfil calibrado y secuencia |
 | 1 | Investigación de mercado | Competidores, precios reales con su fuente, huecos y canales |
 | 2 | Modelo de negocio y oferta | Cliente ideal, propuesta de valor, servicios y precios calibrados |
 | 3 | Marca | Nombre, tono, identidad visual (completa o mínima) |

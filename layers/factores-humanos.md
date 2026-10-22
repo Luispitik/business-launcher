@@ -6,7 +6,7 @@ Un plan solo sirve si la persona puede ejecutarlo. Esta capa detecta lo que lo h
 
 | Momento | Para qué |
 |---|---|
-| Intake (M0) | Detectar urgencia, bloqueo principal y experiencias previas. Como mucho tres preguntas, todas opcionales. |
+| Intake (M0), en el turno de huecos, nunca en la respuesta del brief inicial | Detectar urgencia, bloqueo principal y experiencias previas. Como mucho tres preguntas, todas opcionales. |
 | Checkpoint de M2 | Comprobar que la persona puede defender el precio y vender el servicio tractor. |
 | Checkpoint de M5 | Ajustar el ritmo y la primera semana a su capacidad real. |
 | Checkpoint de M7 | Si algún mensaje le incomoda enviarlo, suavizar el primer paso. |

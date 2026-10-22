@@ -6,7 +6,8 @@
     {
       "name": "business-launcher",
       "source": "./",
-      "description": "Te entrevista, detecta tu ruta y construye contigo el plan de tu negocio de servicios.",
+      "version": "4.0.1",
+      "description": "En el primer mensaje te deja un brief en borrador, detecta tu ruta y construye contigo el plan de tu negocio de servicios.",
       "category": "business"
     }
   ]

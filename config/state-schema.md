@@ -13,6 +13,10 @@ Business Launcher se trabaja en varias sesiones. El progreso vive en un único a
 
 Afirma que el progreso está guardado solo cuando el archivo se ha escrito. Si no se puede guardar, dilo en una línea: el progreso solo vale para esta conversación. La memoria de Claude o la búsqueda en chats anteriores pueden dar pistas, pero el estado sale de la ficha.
 
+## Al arrancar
+
+En una sesión nueva la ficha se crea en el mismo turno que el brief inicial, aunque casi todos los campos estén vacíos, en `null` o en cero. Un campo vacío no es motivo para seguir preguntando antes de entregar el brief: los huecos van como `[PENDIENTE]` en el texto del brief y en "Dónde estamos", que debe decir que el brief es un borrador. `progress.current` queda en `"M0"`, `progress.completed` vacío y `progress.next_step` en confirmar la ruta o el primer módulo. No inventes cifras para que el JSON parezca completo. La versión de la ficha sigue en 4.0.0: el arreglo del 22-10-2026 no cambia el esquema.
+
 Al retomar, resume la ficha en lenguaje natural ("La última vez cerramos la investigación de mercado y la oferta. ¿Seguimos con el plan de 90 días?"). No enseñes el JSON salvo que la persona lo pida.
 
 ## Qué no se guarda
@@ -110,6 +114,7 @@ Pendiente: …
 ```
 
 - Los módulos se identifican siempre como `M0` a `M7` (los archivos se llaman `00-intake.md` a `07-captacion.md`).
+- En el brief borrador los campos desconocidos se dejan vacíos. No se entrevista para completar el esquema antes de entregar el brief.
 - `visual_direction` lo rellena M6 con la estructura descrita en `modules/06-web-prompt.md`.
 - `plan_horizon_days` es 30 en urgencia crítica (ver `layers/factores-humanos.md`).
 
